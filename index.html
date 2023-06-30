@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html  lang="zh-cn">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>幸运值计算</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		.container {
+			max-width: 400px;
+			padding: 20px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		h2 {
+			text-align: center;
+			color: #333;
+		}
+		div.csi{text-align: center;}
+
+		p {
+			text-align: center;
+			color: #666;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: #333;
+		}
+
+		input[type="number"] {
+			width: 100%;
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			outline: none;
+		}
+
+		button {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-top: 20px;
+			background-color: #cc00ff;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #cc00ff;
+		}
+
+		#result {
+			text-align: center;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+		#box1 {
+			text-align: center;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>幸运值计算</h2>
+		<p>本程序仅限兀露露牌子群使用，禁止外传</p>
+		<label for="coins">金币：</label>
+		<input type="number" id="coins">
+		<br><br>
+		<label for="score">得分：</label>
+		<input type="number" id="score">
+		<br><br>
+		<button onclick="calculate()">计算</button>
+		<br>
+		<button onclick="clearInput()">清除</button>
+		<div id="result">&nbsp;</div>
+		<div id="box1">&nbsp;</div>
+		<!--<div class="csi"><a href="index.html">返回首页</a></div>-->
+	</div>
+
+	<script>
+		function calculate() {
+			
+			var coins = parseInt(document.getElementById("coins").value);
+			var score = parseInt(document.getElementById("score").value);
+
+			
+			var luck = -10;
+			var mins = 0.00435;
+			var maxs = 0.00455;
+			var box = 1;
+			var ss = coins / score;
+			
+			for (var i = 0; i < 21; i++) {
+			   
+
+				
+				if (ss >= mins && ss <= maxs && luck < 21) {
+					
+					document.getElementById("result").innerHTML = "您的幸运值为: " + luck;
+					document.getElementById("box1").innerHTML = "您的无尽保底: " + box + "个宝箱";
+					break;
+				} else {
+					
+					luck++;
+					mins += 0.0005;
+					maxs += 0.0005;
+				}
+				if (luck==-9||luck==-6||luck==-3||luck==0||luck==3||luck==6||luck==9){
+					box++;
+				}
+			}
+			if (luck > 10){
+				document.getElementById("result").innerHTML = "您提供的数据与后台数据不匹配，请重试，或者找月桂反馈" ;
+			
+			}
+		}
+		function clearInput() {
+			document.getElementById("coins").value = "";
+			document.getElementById("score").value = "";
+			document.getElementById("result").innerHTML = "&nbsp;";
+			document.getElementById("box1").innerHTML = "&nbsp;";
+		}
+	</script>
+</body>
+</html>
