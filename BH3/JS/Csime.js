@@ -23,6 +23,7 @@ function calculate() {
     var Update = 600; // 版本更新
     var qiandao = 50; // 签到
     var HD = 1500 // 活动
+    var ElysianRealm = 500 //往世乐土 爱莉希雅 我老婆 月桂发癫中。。。。。。
   
     // 版本更新时间
     var BigUpDay = 42;
@@ -53,13 +54,16 @@ function calculate() {
       HD = 0;
     }
     if (ODD >= 4){ // 签到 + 深渊
-      Crys = Abyss + qiandao;
+      Crys = Crys + Abyss + qiandao;
+    }
+    if (ODD >= 1){
+      Crys = Crys + ElysianRealm;
     }
   
     var VerODDmax = parseInt(days / BigUpDay);
     var VerODDmin = parseInt(days / MinUpDay);
-    var maxCRY =parseInt(Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2) + CryCard + VerODDmax * (QA + Live + Update) + HD * (VerODDmax + 1)); // 大版本计算
-    var minCRY =parseInt(Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2) + CryCard + VerODDmin * (QA + Live + Update) + HD * (VerODDmin + 1)); // 小版本计算
+    var maxCRY =parseInt(Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2 + ElysianRealm) + CryCard + VerODDmax * (QA + Live + Update) + HD * (VerODDmax + 1)); // 大版本计算
+    var minCRY =parseInt(Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2 + ElysianRealm) + CryCard + VerODDmin * (QA + Live + Update) + HD * (VerODDmin + 1)); // 小版本计算
     
 	// 内容显示
   
