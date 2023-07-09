@@ -58,8 +58,8 @@ function calculate() {
   
     var VerODDmax = parseInt(days / BigUpDay);
     var VerODDmin = parseInt(days / MinUpDay);
-    var maxCRY = Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2) + CryCard + VerODDmax * (QA + Live + Update) + HD * (VerODDmax + 1); // 大版本计算
-    var minCRY = Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2) + CryCard + VerODDmin * (QA + Live + Update) + HD * (VerODDmin + 1); // 小版本计算
+    var maxCRY =parseInt(Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2) + CryCard + VerODDmax * (QA + Live + Update) + HD * (VerODDmax + 1)); // 大版本计算
+    var minCRY =parseInt(Crys + daily * days + weeks * (Abyss * 2 + ZC + qiandao * 2) + CryCard + VerODDmin * (QA + Live + Update) + HD * (VerODDmin + 1)); // 小版本计算
     
 	// 内容显示
   
