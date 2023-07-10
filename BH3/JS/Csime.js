@@ -3,7 +3,7 @@
 ラウレル工房       月桂工作室
 
 项目名称：崩坏3水晶公式JS（测试）
-编写人：ラウレル  更新人：ラウレル  更新日期：20230708
+编写人：ラウレル  更新人：ラウレル  更新日期：20230710
 已经适配手机
 */
 function calculate() {
@@ -11,27 +11,18 @@ function calculate() {
 	// 月卡开启Dubug
     var days = parseInt(document.getElementById("days").value);      // 获取时间内容
     var BoolCard = parseInt(document.getElementById("Cards").value); // 月卡是否开启：1 - 开启 0 = 不开启
+	
+if (BoolCard < 0 || BoolCard > 1 || isNaN(BoolCard)) {
+    maxsElement.innerHTML = "输入的月卡开启内容有误，请重试";
+    minsElement.innerHTML = "&nbsp;";
+    return;
+}
 
-    if (BoolCard < 0 || BoolCard > 1) {
-      document.getElementById("maxs").innerHTML ="输入的月卡开启内容有误，请重试";
-      document.getElementById("mins").innerHTML ="&nbsp;"
-      return;
-    }
-    if (isNaN(BoolCard)) {
-      document.getElementById("maxs").innerHTML ="输入的月卡开启内容为空，请重试";
-      document.getElementById("mins").innerHTML ="&nbsp;"
-      return;
-    }
-    if(isNaN(days)){
-      document.getElementById("maxs").innerHTML ="输入的天数为空，请重试";
-      document.getElementById("mins").innerHTML ="&nbsp;"
-      return;
-    }
-    if(days <= 0){
-      document.getElementById("maxs").innerHTML ="输入的天数错误，请重试";
-      document.getElementById("mins").innerHTML ="&nbsp;"
-      return;   
-    }
+if (isNaN(days) || days <= 0) {
+    maxsElement.innerHTML = "输入的天数错误，请重试";
+    minsElement.innerHTML = "&nbsp;";
+    return;   
+}
 // 20230710更新结束
   
     var daily = 40; // 日常
@@ -90,7 +81,7 @@ function calculate() {
 
 function clearInput() {  // 清屏 cls
     document.getElementById("days").value = "";
-	document.getElementById("Cards").value = "";
+    document.getElementById("Cards").value = "";
     document.getElementById("maxs").innerHTML = "&nbsp;";
-	document.getElementById("mins").innerHTML = "&nbsp;";
+    document.getElementById("mins").innerHTML = "&nbsp;";
 }
