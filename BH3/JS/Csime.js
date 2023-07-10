@@ -12,29 +12,24 @@ function calculate() {
     var days = parseInt(document.getElementById("days").value);      // 获取时间内容
     var BoolCard = parseInt(document.getElementById("Cards").value); // 月卡是否开启：1 - 开启 0 = 不开启
 
-    if (BoolCard < 0 ) {
+    if (BoolCard < 0 || BoolCard > 1) {
       document.getElementById("maxs").innerHTML ="输入的月卡开启内容有误，请重试";
-      document.getElementById("maxs").innerHTML ="&nbsp;"
-      return;
-    }
-    if (BoolCard > 1) {
-      document.getElementById("maxs").innerHTML ="输入的月卡开启内容有误，请重试";
-      document.getElementById("maxs").innerHTML ="&nbsp;"
+      document.getElementById("mins").innerHTML ="&nbsp;"
       return;
     }
     if (isNaN(BoolCard)) {
       document.getElementById("maxs").innerHTML ="输入的月卡开启内容为空，请重试";
-      document.getElementById("maxs").innerHTML ="&nbsp;"
+      document.getElementById("mins").innerHTML ="&nbsp;"
       return;
     }
     if(isNaN(days)){
       document.getElementById("maxs").innerHTML ="输入的天数为空，请重试";
-      document.getElementById("maxs").innerHTML ="&nbsp;"
+      document.getElementById("mins").innerHTML ="&nbsp;"
       return;
     }
     if(days <= 0){
       document.getElementById("maxs").innerHTML ="输入的天数错误，请重试";
-      document.getElementById("maxs").innerHTML ="&nbsp;"
+      document.getElementById("mins").innerHTML ="&nbsp;"
       return;   
     }
 // 20230710更新结束
