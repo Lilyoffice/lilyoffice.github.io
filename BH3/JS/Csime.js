@@ -3,7 +3,7 @@
 ラウレル工房       月桂工作室
 
 项目名称：崩坏3水晶公式JS（测试）
-编写人：ラウレル  更新人：ラウレル  更新日期：20230710
+编写人：ラウレル  更新人：ラウレル  更新日期：20230711
 已经适配手机
 */
 function calculate() {
@@ -24,7 +24,13 @@ if (isNaN(days) || days <= 0) {
     return;   
 }
 // 20230710更新结束
-  
+// Dubug:天数限定 20230711
+    if (days > 7300){
+	    maxsElement.innerHTML = "亲；您觉得您可以囤20年及以上的水晶吗？";
+	    minsElement.innerHTML = "请重试";
+	    return;
+    }
+// 20230711更新结束  
     var daily = 40; // 日常
     var DailyCard = 60; // 月卡，每日登录
     var CardXV = 500; // 月卡，15天奖励
