@@ -13,14 +13,14 @@ function calculate() {
     var BoolCard = parseInt(document.getElementById("Cards").value); // 月卡是否开启：1 - 开启 0 = 不开启
 	
 if (BoolCard < 0 || BoolCard > 1 || isNaN(BoolCard)) {
-    maxsElement.innerHTML = "输入的月卡开启内容有误，请重试";
-    minsElement.innerHTML = "&nbsp;";
+    document.getElementById("maxs").innerHTML = "输入的月卡开启内容有误，请重试";
+    document.getElementById("mins").innerHTML =  "&nbsp;";
     return;
 }
 
 if (isNaN(days) || days <= 0) {
-    maxsElement.innerHTML = "输入的天数错误，请重试";
-    minsElement.innerHTML = "&nbsp;";
+    document.getElementById("maxs").innerHTML ="输入的天数错误，请重试";
+    document.getElementById("mins").innerHTML =  "&nbsp;";
     return;   
 }
 // 20230710更新结束
