@@ -3,14 +3,16 @@
     <pm>
         <id>5000</id>
         <name>圣灵谱尼</name>
-        <natureI>神灵</natureI>
-        <natureII>N/A</natureII>
+        <natureI>神灵</natureI><natureII>N/A</natureII>
+        <race>820</race><level>100</level><ind>31</ind><cha>保守</cha><chara>回神5星</chara>
+        <Adt>0</Adt><Adf>0</Adf><Apt>255</Apt><Apf>0</Apf><spd>0</spd><hp>255</hp>
     </pm>
     <pm>
         <id>4450</id>
         <name>逐界苍星</name>
-        <natureI>机械</natureI>
-        <natureII>神秘</natureII>
+        <natureI>机械</natureI><natureII>神秘</natureII>
+        <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>坚硬3星</chara>
+        <Adt>0</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><spd>255</spd><hp>255</hp>
     </pm>
 </pmpool>
 <!-- 
@@ -18,8 +20,9 @@
     <pm>
         <id></id>
         <name></name>
-        <natureI></natureI>
-        <natureII></natureII>
+        <natureI></natureI><natureII></natureII>
+        <race></race><level></level><ind></ind><cha></cha><chara></chara>
+        <Adt></Adt><Adf></Adf><Apt></Apt><Apf></Apf><spd></spd><hp></hp>
     </pm>
 
 -->
