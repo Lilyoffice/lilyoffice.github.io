@@ -1,12 +1,12 @@
 window.onload = function() {
     // 使用 AJAX 加载外部 XML 文件
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://lilyoffice.github.io/seer/report/main.xml", true);
+    xhr.open("GET", "main.xml", true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 解析 XML 文件
             var xmlDoc = xhr.responseXML;
-            var students = xmlDoc.getElementsByTagName("student");
+            var students = xmlDoc.getElementsByTagName("pm");
 
             // 填充表格内容
             var tableBody = document.querySelector("#myTable tbody");
