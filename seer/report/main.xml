@@ -14,15 +14,45 @@
         <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>坚硬3星</chara>
         <Adt>0</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>255</Spd><HP>255</HP>
     </pm>
+
+     <pm>
+        <id>4321</id>
+        <name>至序圣华</name>
+        <natureI>圣灵</natureI>
+        <natureII>轮回</natureII>
+        <race>800</race>
+        <level>100</level>
+        <ind>31</ind>
+        <cha>胆小</cha>
+        <chara>瞬杀5星</chara>
+        <Adt>0</Adt>
+        <Adf>255</Adf>
+        <Apt>0</Apt>
+        <Apf>255</Apf>
+        <Spd>0</Spd>
+        <Hp>0</Hp>
+    </pm>
+
+    
 </pmpool>
 <!-- 
 
     <pm>
         <id></id>
         <name></name>
-        <natureI></natureI><natureII></natureII>
-        <race></race><level></level><ind></ind><cha></cha><chara></chara>
-        <Adt></Adt><Adf></Adf><Apt></Apt><Apf></Apf><Spd></Spd><Hp></Hp>
+        <natureI></natureI>
+        <natureII></natureII>
+        <race></race>
+        <level></level>
+        <ind></ind>
+        <cha></cha>
+        <chara></chara>
+        <Adt></Adt>
+        <Adf></Adf>
+        <Apt></Apt>
+        <Apf></Apf>
+        <Spd></Spd>
+        <Hp></Hp>
     </pm>
 
 -->
