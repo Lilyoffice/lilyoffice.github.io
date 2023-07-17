@@ -1,7 +1,7 @@
 window.onload = function() {
     // 使用 AJAX 加载外部 XML 文件
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "main.xml", true);
+    xhr.open("GET", "https://lilyoffice.github.io/seer/report/main.xml", true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 解析 XML 文件
