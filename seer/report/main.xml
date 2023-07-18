@@ -19,7 +19,7 @@
         <name>至序圣华</name>
         <natureI>圣灵</natureI><natureII>轮回</natureII>
         <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>瞬杀5星</chara>
-        <Adt>0</Adt><Adf>255</Adf><Apt>0</Apt><Apf>255</Apf><Spd>0</Spd><Hp>0</Hp>
+        <Adt>0</Adt><Adf>255</Adf><Apt>0</Apt><Apf>255</Apf><Spd>0</Spd><HP>0</HP>
     </pm>    
 </pmpool>
 <!-- 
@@ -39,7 +39,7 @@
         <Apt></Apt>
         <Apf></Apf>
         <Spd></Spd>
-        <Hp></Hp>
+        <HP></HP>
     </pm>
 
 -->
