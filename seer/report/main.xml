@@ -3,7 +3,7 @@
     <pm>
         <id>5000</id>
         <name>圣灵谱尼</name>
-        <natureI>神灵</natureI><natureII>N/A</natureII>
+        <natureI>神灵</natureI><natureII>--</natureII>
         <race>820</race><level>100</level><ind>31</ind><cha>保守</cha><chara>回神5星</chara>
         <Adt>0</Adt><Adf>0</Adf><Apt>255</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
     </pm>
@@ -14,13 +14,27 @@
         <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>坚硬3星</chara>
         <Adt>0</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>255</Spd><HP>255</HP>
     </pm>
+    <pm>
+        <id>3986</id>
+        <name>启灵元神</name>
+        <natureI>神灵</natureI><natureII>--</natureII>
+        <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>瞬杀5星</chara>
+        <Adt>0</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>255</Spd><HP>255</HP>
+    </pm>
      <pm>
         <id>4321</id>
         <name>至序圣华</name>
         <natureI>圣灵</natureI><natureII>轮回</natureII>
         <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>瞬杀5星</chara>
         <Adt>0</Adt><Adf>255</Adf><Apt>0</Apt><Apf>255</Apf><Spd>0</Spd><HP>0</HP>
-    </pm>    
+    </pm>
+    <pm>
+        <id>4169</id>
+        <name>弑序神罗</name>
+        <natureI>虚空</natureI><natureII>混沌</natureII>
+        <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>阴森5星</chara>
+        <Adt>0</Adt><Adf>0</Adf><Apt>255</Apt><Apf>0</Apf><Spd>255</Spd><HP>0</HP>
+    </pm>
 </pmpool>
 <!-- 
 月桂 格式更新 20230717
