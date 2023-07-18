@@ -31,6 +31,9 @@ window.onload = function() {
                     var Spd = student.getElementsByTagName("Spd")[0].textContent;
                     var HP = student.getElementsByTagName("HP")[0].textContent;
                     var zzz = parseInt(Adt) + parseInt(Adf) + parseInt(Apt) + parseInt(Apf) + parseInt(Spd) + parseInt(HP)
+                //精灵标识相关 巡礼部 20230718
+                var pmlabel = student.getElementsByTagName("pmlabel")[0].textContent;
+                
 
                 
 
@@ -53,6 +56,8 @@ window.onload = function() {
                 row.insertCell().textContent = HP;
 
                 row.insertCell().textContent = zzz;
+                //精灵标识相关 巡礼部 20230718
+                row.insertCell().textContent = pmlabel;
 
 
             }
