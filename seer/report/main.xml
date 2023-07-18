@@ -35,6 +35,13 @@
         <race>800</race><level>100</level><ind>31</ind><cha>胆小</cha><chara>阴森5星</chara>
         <Adt>0</Adt><Adf>0</Adf><Apt>255</Apt><Apf>0</Apf><Spd>255</Spd><HP>0</HP>
     </pm>
+    <pm>
+        <id>3788</id>
+        <name>混元天尊</name>
+        <natureI>混沌</natureI><natureII>次元</natureII>
+        <race>800</race><level>100</level><ind>31</ind><cha>开朗</cha><chara>强袭5星</chara>
+        <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>255</Spd><HP>0</HP>
+    </pm>
 </pmpool>
 <!-- 
 月桂 格式更新 20230717
