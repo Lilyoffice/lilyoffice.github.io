@@ -66,6 +66,23 @@
         <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
         <pmlabel>[S][SP]</pmlabel>
     </pm>
+        <pm>
+        <id>4515</id>
+        <name>霍光</name>
+        <natureI>水</natureI><natureII>神秘</natureII>
+        <race>750</race><level>100</level><ind>31</ind><cha>开朗</cha><chara>强袭5星</chara>
+        <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>255</Spd><HP>0</HP>
+        <pmlabel>[A][SP]</pmlabel>
+    </pm>
+    
+    <pm>
+        <id>4500</id>
+        <name>武心婵</name>
+        <natureI>圣灵</natureI><natureII>自然</natureII>
+        <race>750</race><level>100</level><ind>31</ind><cha>保守</cha><chara>瞬杀5星</chara>
+        <Adt>0</Adt><Adf>0</Adf><Apt>254</Apt><Apf>0</Apf><Spd>4</Spd><HP>252</HP>
+        <pmlabel>[A][SP]</pmlabel>
+    </pm>
 </pmpool>
 <!-- 
 月桂 格式更新 20230717
