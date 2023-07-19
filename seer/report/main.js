@@ -1,7 +1,7 @@
 window.onload = function() {
     // 使用 AJAX 加载外部 XML 文件
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "main.xml?ver=111&Form=JS111", true);//注意更新版本号
+    xhr.open("GET", "main.xml?ver=112&Form=JS112", true);//注意更新版本号
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 解析 XML 文件
