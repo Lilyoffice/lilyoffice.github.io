@@ -58,6 +58,14 @@
         <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>255</Spd><HP>0</HP>
         <pmlabel>[S][SP]</pmlabel>
     </pm>
+    <pm>
+        <id>3550</id>
+        <name>天启帝君</name>
+        <natureI>轮回</natureI><natureII>--</natureII>
+        <race>780</race><level>100</level><ind>31</ind><cha>固执</cha><chara>精准3星</chara>
+        <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
+        <pmlabel>[S][SP]</pmlabel>
+    </pm>
 </pmpool>
 <!-- 
 月桂 格式更新 20230717
