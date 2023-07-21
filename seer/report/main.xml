@@ -83,6 +83,14 @@
         <Adt>0</Adt><Adf>0</Adf><Apt>254</Apt><Apf>0</Apf><Spd>4</Spd><HP>252</HP>
         <pmlabel>[A][SP]</pmlabel>
     </pm>
+    <pm>
+        <id>4329</id>
+        <name>倪克斯</name>
+        <natureI>神秘</natureI><natureII>超能</natureII>
+        <race>750</race><level>100</level><ind>31</ind><cha>保守</cha><chara>精神5星</chara>
+        <Adt>0</Adt><Adf>40</Adf><Apt>214</Apt><Apf>40</Apf><Spd></Spd><HP>216</HP>
+        <pmlabel>[A][SP][G]</pmlabel>
+    </pm>
 </pmpool>
 <!-- 
 月桂 格式更新 20230717
