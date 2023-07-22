@@ -2,11 +2,11 @@
 <html lang="zh-cn">
 <head>
     <!-- 
-    巡礼部 报盘数据显示
+    档案部 - 巡礼部 报盘数据显示
     20230718
     -->
     <meta charset="UTF-8">
-    <title>精灵报盘数据</title>
+    <title>精灵联盟数据报盘系统</title>
     
     <style>
 
@@ -18,30 +18,39 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column; /* 添加垂直方向布局 */
         }
 
-table {
-    border-collapse: collapse;
-    width: 90%;
-    max-width: 1100px;
-    font-size: 15px;
-}
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px; /* 添加下边距使其与表格有间隔 */
+        }
 
-th, td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: center;
-    font-family: 'FangSong_GB2312','Times New Roman', serif;
-}
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1100px;
+            font-size: 15px;
+            margin: 0 auto; /* 添加自动居中的margin样式 */
+        }
 
-th {
-    background-color: #f2f2f2;
-}
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            font-family: 'FangSong_GB2312','Times New Roman', serif;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
 
     </style>
 </head>
 <body>
     <div class="container">
+        <h1>精灵联盟数据报盘系统</h1>
         <table id="myTable">
             <thead>
                 <tr>
@@ -66,8 +75,9 @@ th {
             </thead>
             <tbody></tbody>
         </table>
+        <div>精灵联盟总部档案部 精灵联盟总部巡礼部 版权所有 Copyright © 2000-2023 All Right Reserved</div>
     </div>
 
-    <script src="main.js?Ver=0X18A&Time=20230721&From=xlb"></script>
+    <script src="main.js?Ver=0X18A&Time=20230713&From=xlb"></script>
 </body>
 </html>
