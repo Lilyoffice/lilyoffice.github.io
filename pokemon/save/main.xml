@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmpool>
+    <pm>
+        <id>280</id>
+        <name>拉鲁拉斯</name>
+        <nature>超能·妖精</nature>
+        <level>12</level>
+        <tx>同步</tx>
+        <note>太晶属性：待定 40级开始解锁精灵王效果</note>
+    </pm>
+    <pm>
+        <id>4</id>
+        <name>小火龙</name>
+        <nature>火</nature>
+        <level>10</level>
+        <tx>猛火</tx>
+        <note>太晶属性：火</note>
+    </pm>
+    <pm>
+        <id>120</id>
+        <name>海星星</name>
+        <nature>水</nature>
+        <level>10</level>
+        <tx>自然回复</tx>
+        <note>太晶属性：水</note>
+    </pm>
+    <pm>
+        <id>548</id>
+        <name>百合根娃娃</name>
+        <nature>草</nature>
+        <level>10</level>
+        <tx>叶绿素</tx>
+        <note>太晶属性：草 后期可以变洗翠形态（后期矢车森林转化形态；并基础形态获得强化）</note>
+    </pm>
+    <pm>
+        <id>548</id>
+        <name>伞电蜥</name>
+        <nature>电·一般</nature>
+        <level>10</level>
+        <tx>干燥皮肤</tx>
+        <note>太晶属性：待定</note>
+    </pm>
+    <pm>
+        <id>32</id>
+        <name>尼多朗</name>
+        <nature>毒</nature>
+        <level>10</level>
+        <tx>毒刺</tx>
+        <note>太晶属性：毒</note>
+    </pm>   
+</pmpool>
