@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pmpool>
+    <!-- 模板 123
+    <pm>
+        <id></id>
+        <name></name>
+        <nature></nature>
+        <level></level>
+        <tx></tx>
+        <note>太晶属性：</note>
+    </pm>
+    -->
+    
     <pm>
         <id>280</id>
         <name>拉鲁拉斯</name>
