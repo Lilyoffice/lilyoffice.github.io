@@ -88,7 +88,7 @@
         <name>倪克斯</name>
         <natureI>神秘</natureI><natureII>超能</natureII>
         <race>750</race><level>100</level><ind>31</ind><cha>保守</cha><chara>精神5星</chara>
-        <Adt>0</Adt><Adf>40</Adf><Apt>214</Apt><Apf>40</Apf><Spd></Spd><HP>216</HP>
+        <Adt>0</Adt><Adf>40</Adf><Apt>214</Apt><Apf>40</Apf><Spd>0</Spd><HP>216</HP>
         <pmlabel>[A][SP][G]</pmlabel>
     </pm>
 </pmpool>
