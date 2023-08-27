@@ -1,5 +1,5 @@
 window.onload = function() {
-    var SaveTime = "2023/7/22 晚"//存档时间
+    var SaveTime = "2023/8/27 17:00"//存档时间
 document.getElementById("Time").innerHTML=SaveTime
 
 var SaveName = "陆猛"//存档时间
@@ -11,8 +11,8 @@ document.getElementById("OName").innerHTML=SaveOtherTrainName
 // 以下内容注意修改
 
 var Area = "合众地区"//所在地区
-var City = "三耀市"//所在位置
-var HZ = 1 //徽章数
+var City = "贵宾船"//所在位置
+var HZ = "2 (包含特殊徽章 1 :随机精灵挑战 )" //徽章数
 document.getElementById("Area").innerHTML=Area
 document.getElementById("City").innerHTML=City
 document.getElementById("HZ").innerHTML=HZ
