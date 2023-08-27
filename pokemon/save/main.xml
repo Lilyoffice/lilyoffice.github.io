@@ -58,5 +58,13 @@
         <level>14</level>
         <tx>毒刺</tx>
         <note>太晶属性：毒</note>
-    </pm>   
+    </pm>
+    <pm>
+        <id>577</id>
+        <name>单卵细胞球</name>
+        <nature>单卵细胞球</nature>
+        <level>16</level>
+        <tx>魔法防守</tx>
+        <note>太晶属性：超能</note>
+    </pm>
 </pmpool>
