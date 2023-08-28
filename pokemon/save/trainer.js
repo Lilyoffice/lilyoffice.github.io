@@ -1,3 +1,12 @@
+//本JS作废
+
+//本JS作废
+
+//本JS作废
+
+//本JS作废
+
+
 window.onload = function() {
     var SaveTime = "2023/8/27 17:00"//存档时间
 document.getElementById("Time").innerHTML=SaveTime
