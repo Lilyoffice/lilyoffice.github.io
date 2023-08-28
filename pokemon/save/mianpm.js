@@ -19,7 +19,7 @@ window.onload = function() {
 
     //以下内容为读取XML，不要改
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "main.xml?ver=230827", true);//注意更新版本号
+    xhr.open("GET", "main.xml?ver=230828&III", true);//注意更新版本号
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 解析 XML 文件
