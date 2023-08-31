@@ -19,32 +19,34 @@ window.onload = function() {
 
     //以下内容为读取XML，不要改
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "main.xml?ver=230828&III", true);//注意更新版本号
+    xhr.open("GET", "main.xml?ver=230831&0X18A", true);//注意更新版本号
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 解析 XML 文件
             var xmlDoc = xhr.responseXML;
-            var students = xmlDoc.getElementsByTagName("pm");
+            var pms = xmlDoc.getElementsByTagName("pm");
 
             // 填充表格内容
             var tableBody = document.querySelector("#myTable tbody");
-            for (var i = 0; i < students.length; i++) {
-                var student = students[i];
-                var id = student.getElementsByTagName("id")[0].textContent;
-                var name = student.getElementsByTagName("name")[0].textContent;
-                var nature = student.getElementsByTagName("nature")[0].textContent;
-                var level = student.getElementsByTagName("level")[0].textContent;
-                var tx = student.getElementsByTagName("tx")[0].textContent;
-                var note = student.getElementsByTagName("note")[0].textContent;
+            for (var i = 0; i < pms.length; i++) {
+                var Pokemon = pms[i];
+                var id = Pokemon.getElementsByTagName("id")[0].textContent;
+                var name = Pokemon.getElementsByTagName("name")[0].textContent;
+                var nature = Pokemon.getElementsByTagName("nature")[0].textContent;
+                var level = Pokemon.getElementsByTagName("level")[0].textContent;
+                var tx = Pokemon.getElementsByTagName("tx")[0].textContent;
+                var note = Pokemon.getElementsByTagName("note")[0].textContent;
                 
 
                 var row = tableBody.insertRow();
+                
                 row.insertCell().textContent = id;
                 row.insertCell().textContent = name;
                 row.insertCell().textContent = nature;
                 row.insertCell().textContent = level;
                 row.insertCell().textContent = tx;
                 row.insertCell().textContent = note;
+                
                 
 
             }
