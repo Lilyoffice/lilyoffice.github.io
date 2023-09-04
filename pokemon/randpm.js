@@ -1049,10 +1049,10 @@ function prpl(pmid){
         default: PmName = "未知精灵"; break;
    }
    window.pokemonName = PmName
-   document.getElementById("result").innerHTML = "随机的精灵为：" + console.log(pokemonName)+",随机序号为：" + console.log(pokemonNumber)
+   document.getElementById("result").innerHTML = "随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber
 }
 function runurl(){
-var url = "https://wiki.52poke.com/wiki/" + console.log(pokemonName)
+var url = "https://wiki.52poke.com/wiki/" + window.pokemonName
 window.location.href = url;
 
 }
