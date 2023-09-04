@@ -27,7 +27,7 @@ let keypms = [114,145,146,150,151,201,243,244,245,249,250,251,377,378,379,380,38
 if (keypms.includes(pmid)) {
 rands();
 } else {
-window.pokemonNumber = 0
+window.pokemonNumber = pmid
 prpl(pmid);
 }
 }
