@@ -1,6 +1,6 @@
 function runids() {
     window.pokemonName = ""
-    window.pokemonNumber = 0
+    window.pokemonNumber = null
     var pmid = parseInt(document.getElementById("pmid").value);
 
 // Ban精灵：神兽
