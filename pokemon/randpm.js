@@ -232,7 +232,7 @@ function prpl(pmid){
         case 195:PmName="沼王";break;
         case 196:PmName="太阳伊布";break;
         case 197:PmName="月亮伊布";break;
-        case 198:PmName="黑暗鸦";break;
+        case 198:PmName="乌鸦头头";break;
         case 199:PmName="呆呆王";break;
         case 200:PmName="梦妖魔";break;
         case 201:PmName="未知图腾";break;
