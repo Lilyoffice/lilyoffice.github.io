@@ -1050,6 +1050,7 @@ function prpl(pmid){
    }
    window.pokemonName = PmName
    document.getElementById("result").innerHTML = "随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber
+   document.getElementById("pmid").value = "";
 }
 function runurl(){
 var url = "https://wiki.52poke.com/wiki/" + window.pokemonName
