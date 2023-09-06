@@ -1,12 +1,16 @@
+window.onload = function() {
+    window.banlist = [114,145,146,150,151,201,243,244,245,249,250,251,377,378,379,380,381,382,383,384,385,386,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,638,639,640,641,642,643,644,645,646,647,648,649,716,717,718,719,720,721];
+}
+
 function runids() {
-    window.pokemonName = ""
+    window.pokemonName = null
     window.pokemonNumber = null
     var pmid = parseInt(document.getElementById("pmid").value);
 
 // Ban精灵：神兽
-let keypms = [114,145,146,150,151,201,243,244,245,249,250,251,377,378,379,380,381,382,383,384,385,386,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,638,639,640,641,642,643,644,645,646,647,648,649,716,717,718,719,720,721];
 
-if (keypms.includes(pmid)) {
+
+if (window.banlist.includes(pmid)) {
     document.getElementById("result").innerHTML = "您提供的精灵序号为限制级宝可梦，请重试";
 } else if (pmid > 784) {
     document.getElementById("result").innerHTML = "输入的精灵大于日月普通精灵的精灵序号，请重试";
@@ -22,9 +26,8 @@ function rands(){
 var pmid = parseInt(Math.random() * 784 + 1);
 
 // Ban精灵：神兽
-let keypms = [114,145,146,150,151,201,243,244,245,249,250,251,377,378,379,380,381,382,383,384,385,386,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,638,639,640,641,642,643,644,645,646,647,648,649,716,717,718,719,720,721];
 
-if (keypms.includes(pmid)) {
+if (window.banlist.includes(pmid)) {
 rands();
 } else {
 window.pokemonNumber = pmid
@@ -34,6 +37,14 @@ prpl(pmid);
 
 function prpl(pmid){
     var PmName="待确认精灵"
+    
+    // 0906 : 更新软件后门 - 调试模式可以查询802之后的
+
+    window.pokemonNumber = pmid
+
+    // 0906更新结束
+
+    
     switch(pmid){//精灵查询序号
         case 1:PmName="妙蛙花";break;
         case 2:PmName="妙蛙花";break;
