@@ -1059,9 +1059,12 @@ function prpl(pmid){
         case 1010:PmName="铁斑叶";break;
         default: PmName = "未知精灵"; break;
    }
-   window.pokemonName = PmName
-   document.getElementById("result").innerHTML = "随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber
+   window.pokemonName = PmName;
+   document.getElementById("result").innerHTML = "随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber;
    document.getElementById("pmid").value = "";
+    //0909调试显示
+   console.log("随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber);
+   
 }
 function runurl(){
 var url = "https://wiki.52poke.com/wiki/" + window.pokemonName
