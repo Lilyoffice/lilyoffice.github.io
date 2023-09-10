@@ -9,8 +9,9 @@ function readhit(){
 console.log("debug log - lilyoffice:内容不合法，终止程序。");
     }
     else{
-        hit(Adt,Def,rate,power,natures);
 console.log("debug log - lilyoffice:合法,执行hit函数");
+        hit(Adt,Def,rate,power,natures);
+
     }
 }
 
