@@ -15,8 +15,12 @@ function readIv(){
     console.log("敌方体力：" + hp);
     if (window.pokemonNumber == 292){hp = 1;}
     //计算后赋值
-    document.getElementById("adt").value = adt
-    document.getElementById("def").value = def
+    document.getElementById("adt").value = adt;
+    document.getElementById("def").value = def;
     document.getElementById("HPS").innerHTML = "敌方体力:" + hp;
+    document.getElementById("adtIv").value ="";
+    document.getElementById("defIv").value ="";
+    document.getElementById(hpIv").value ="";
+    
   }
 }
