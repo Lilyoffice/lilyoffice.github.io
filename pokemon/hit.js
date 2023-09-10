@@ -49,5 +49,8 @@ console.log("debug log - lilyoffice:暴击随机数：" + maxhit)
         window.msgs = msg;
 console.log(window.msgs)
         document.getElementById("result1").innerHTML = msg;
+        document.getElementById("rate").value ="";
+        document.getElementById("power").value ="";
+        document.getElementById("natures").value ="";
     }
 }
