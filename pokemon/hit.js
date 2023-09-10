@@ -27,7 +27,7 @@ console.log("debug log - lilyoffice:命中随机数：" + Getmiss)
     }
     else{
         var hitran = Math.random() * 0.15 + 0.85;
-console.log("debug log - lilyoffice:伤害随机数：" + Getmiss);
+console.log("debug log - lilyoffice:伤害随机数：" + hitran);
         var hits = ((210/250) * (Adt/Def) * power + 2) * hitran;
         // 暴击判定
         var maxhit= Math.random() * 1;
