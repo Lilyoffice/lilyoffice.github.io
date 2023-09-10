@@ -1,14 +1,16 @@
-readhit(){
-    var Adt = parseInt(document.getElementById("adt").value);var Def = parseInt(document.getElementById("def").value);
-    var rate = parseInt(document.getElementById("rate").value);var power = parseInt(document.getElementById("power").value);
+function readhit(){
+    var Adt = parseInt(document.getElementById("adt").value);
+    var Def = parseInt(document.getElementById("def").value);
+    var rate = parseInt(document.getElementById("rate").value);
+    var power = parseInt(document.getElementById("power").value);
     var natures = parseInt(document.getElementById("natures").value);
     if(Adt < 1 || Def < 1 || rate < 1 || power < 1 || natures < 0 ){
         document.getElementById("result1").innerHTML ="输入的内容不合法，请重试。";
 console.log("debug log - lilyoffice:内容不合法，终止程序。");
-                                                                   }
+    }
     else{
-        hit(Adt,Def,rate,power,natures)
-console.log("debug log - lilyoffice:合法，执行hit函数");
+        hit(Adt,Def,rate,power,natures);
+console.log("debug log - lilyoffice:合法,执行hit函数");
     }
 }
 
@@ -35,7 +37,7 @@ console.log("debug log - lilyoffice:暴击随机数：" + maxhit)
             msg = "攻击方暴击了，";
         }
       // 属性克制关系
-        if (natures > 1){msg = msg + "效果拔群，";} else (natures < 1){msg = msg + "收效甚微，";} 
+        if (natures > 1){msg = msg + "效果拔群，";} else {msg = msg + "收效甚微，";} 
         hits = hits * natures
         // 属性一致性：
         var YZhits = hits * 1.5;
