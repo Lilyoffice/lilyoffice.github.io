@@ -31,7 +31,25 @@ button:hover{background-color:#cc00ff;}
 		<button onclick="rands()">随机</button>
 	  <br>
 	  <button onclick="runurl()">查看精灵</button>
+	  <h2>附：伤害计算</h2>
+	  <label for="adt">攻击方攻击：</label>
+          <input type="number" id="adt">
+	  <label for="def">防御方防御：</label>
+          <input type="number" id="def">
+	  <label for="rate">攻击方命中：</label>
+          <input type="number" id="rate">
+	  <label for="power">技能  威力：</label>
+          <input type="number" id="power">
+	  <label for="natures">属性克制系数：</label>
+          <input type="number" id="natures">
+	  <br><br>
+	  <div id="msgs">注:本计算不计算对战中的属性提升</div>
+         <div id="result1">&nbsp;</div>
+          <br><br>
+	  <button onclick="readhit()">计算</button>
 	  
-    <script src="randpm.js?ID=230909&Ver=005"></script>
+	  
+    <script src="randpm.js?ID=230910&Ver=006"></script>
+    <script src="hit.js?ID=230910&Ver=001"></script>
 </body>
 </html>
