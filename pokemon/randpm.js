@@ -1063,7 +1063,7 @@ function prpl(pmid){
    document.getElementById("result").innerHTML = "随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber;
    document.getElementById("pmid").value = "";
     //0909调试显示
-   console.log("随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber);
+   console.log("debug log - lilyoffice:随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber);
    
 }
 function runurl(){
