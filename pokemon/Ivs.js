@@ -20,7 +20,7 @@ function Iv(){
     document.getElementById("HPS").innerHTML = "敌方体力:" + hp;
     document.getElementById("adtIv").value ="";
     document.getElementById("defIv").value ="";
-    document.getElementById(hpIv").value ="";
+    document.getElementById("hpIv").value ="";
     
   }
 }
