@@ -1,4 +1,4 @@
-function readIv(){
+function Iv(){
   var adtiv = parseInt(document.getElementById("adtIv").value);
   var defiv = parseInt(document.getElementById("defIv").value);
   var hpiv = parseInt(document.getElementById("hpIv").value);
