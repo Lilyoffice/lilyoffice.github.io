@@ -1,7 +1,179 @@
-window.onload = function() {
-    window.banlist = [114,145,146,150,151,201,243,244,245,249,250,251,377,378,379,380,381,382,383,384,385,386,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,638,639,640,641,642,643,644,645,646,647,648,649,716,717,718,719,720,721];
+//IE不适配 20230911
+//window.onload = function() {
+//    window.banlist = [144,145,146,150,151,201,243,244,245,249,250,251,377,378,379,380,381,382,383,384,385,386,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,638,639,640,641,642,643,644,645,646,647,648,649,716,717,718,719,720,721];
+//}
+//适配IE
+function banlist(pmid) {
+    var banpm = false;
+    switch(pmid){
+        case 144:
+            banpm = true;
+        break;
+        case 145:
+            banpm = true;
+        break;
+        case 146:
+            banpm = true;
+        break;
+        case 150:
+            banpm = true;
+        break;
+        case 151:
+            banpm = true;
+        break;
+        case 201:
+            banpm = true;
+        break;
+        case 243:
+            banpm = true;
+        break;
+        case 244:
+            banpm = true;
+        break;
+        case 245:
+            banpm = true;
+        break;
+        case 249:
+            banpm = true;
+        break;
+        case 250:
+            banpm = true;
+        break;
+        case 251:
+            banpm = true;
+        break;
+        case 377:
+            banpm = true;
+        break;
+        case 378:
+            banpm = true;
+        break;
+        case 379:
+            banpm = true;
+        break;
+        case 380:
+            banpm = true;
+        break;
+        case 381:
+            banpm = true;
+        break;
+        case 382:
+            banpm = true;
+        break;
+        case 383:
+            banpm = true;
+        break;
+        case 384:
+            banpm = true;
+        break;
+        case 385:
+            banpm = true;
+        break;
+        case 386:
+            banpm = true;
+        break;
+        case 480:
+            banpm = true;
+        break;
+        case 481:
+            banpm = true;
+        break;
+        case 482:
+            banpm = true;
+        break;
+        case 483:
+            banpm = true;
+        break;
+        case 484:
+            banpm = true;
+        break;
+        case 485:
+            banpm = true;
+        break;
+        case 486:
+            banpm = true;
+        break;
+        case 487:
+            banpm = true;
+        break;
+        case 488:
+            banpm = true;
+        break;
+        case 489:
+            banpm = true;
+        break;
+        case 490:
+            banpm = true;
+        break;
+        case 491:
+            banpm = true;
+        break;
+        case 492:
+            banpm = true;
+        break;
+        case 493:
+            banpm = true;
+        break;
+        case 494:
+            banpm = true;
+        break;
+        case 638:
+            banpm = true;
+        break;
+        case 639:
+            banpm = true;
+        break;
+        case 640:
+            banpm = true;
+        break;
+        case 641:
+            banpm = true;
+        break;
+        case 642:
+            banpm = true;
+        break;
+        case 643:
+            banpm = true;
+        break;
+        case 644:
+            banpm = true;
+        break;
+        case 645:
+            banpm = true;
+        break;
+        case 646:
+            banpm = true;
+        break;
+        case 647:
+            banpm = true;
+        break;
+        case 648:
+            banpm = true;
+        break;
+        case 649:
+            banpm = true;
+        break;
+        case 716:
+            banpm = true;
+        break;
+        case 717:
+            banpm = true;
+        break;
+        case 718:
+            banpm = true;
+        break;
+        case 719:
+            banpm = true;
+        break;
+        case 720:
+            banpm = true;
+        break;
+        case 721:
+            banpm = true;
+        break;
+    }
+    return banpm
 }
-
 function runids() {
     window.pokemonName = null
     window.pokemonNumber = null
@@ -9,8 +181,10 @@ function runids() {
 
 // Ban精灵：神兽
 
-
-if (window.banlist.includes(pmid)) {
+// IE不适配 20230911
+// if (window.banlist.includes(pmid)) {
+// 适配IE工程：20230911
+if (banlist(pmid) == true) {
     document.getElementById("result").innerHTML = "您提供的精灵序号为限制级宝可梦，请重试";
 } else if (pmid > 784) {
     document.getElementById("result").innerHTML = "输入的精灵大于日月普通精灵的精灵序号，请重试";
@@ -27,7 +201,11 @@ var pmid = parseInt(Math.random() * 784 + 1);
 
 // Ban精灵：神兽
 
-if (window.banlist.includes(pmid)) {
+    
+// IE不适配 20230911
+// if (window.banlist.includes(pmid)) {
+// 适配IE工程：20230911
+if (banlist(pmid) == true) {
 rands();
 } else {
 window.pokemonNumber = pmid
