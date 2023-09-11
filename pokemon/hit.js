@@ -3,7 +3,9 @@ function readhit(){
     var Def = parseInt(document.getElementById("def").value);
     var rate = parseInt(document.getElementById("rate").value);
     var power = parseInt(document.getElementById("power").value);
-    var natures = parseInt(document.getElementById("natures").value);
+    // BUG修复 911
+    // var natures = parseInt(document.getElementById("natures").value);
+    var natures = document.getElementById("natures").value;
     if(Adt < 1 || Def < 1 || rate < 1 || power < 1 || natures < 0 ){
         document.getElementById("result1").innerHTML ="输入的内容不合法，请重试。";
 console.log("debug log - lilyoffice:内容不合法，终止程序。");
