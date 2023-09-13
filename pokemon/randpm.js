@@ -19,14 +19,14 @@ if (banlist(pmid) == true) {
 } else if (pmid > 784) {
     document.getElementById("result").innerHTML = "输入的精灵大于日月普通精灵的精灵序号，请重试";
 } else {
-    window.pokemonNumber = pmid
+    window.pokemonNumber = pmid;
     prpl(pmid);
 }
 }
 
 function rands(){
-    window.pokemonName = ""
-    window.pokemonNumber = 0
+    window.pokemonName = "";
+    window.pokemonNumber = 0;
 var pmid = parseInt(Math.random() * 784 + 1);
 
 // Ban精灵：神兽
@@ -38,17 +38,17 @@ var pmid = parseInt(Math.random() * 784 + 1);
 if (banlist(pmid) == true) {
 rands();
 } else {
-window.pokemonNumber = pmid
+window.pokemonNumber = pmid;
 prpl(pmid);
 }
 }
 
 function prpl(pmid){
-    var PmName="待确认精灵"
+    var PmName="待确认精灵";
     
     // 0906 : 更新软件后门 - 调试模式可以查询802之后的
 
-    window.pokemonNumber = pmid
+    window.pokemonNumber = pmid;
 
     // 0906更新结束
 
@@ -62,7 +62,8 @@ function prpl(pmid){
    
 }
 function runurl(){
-var url = "https://wiki.52poke.com/wiki/" + window.pokemonName
-window.location.href = url;
+var url = "https://wiki.52poke.com/wiki/" + window.pokemonName;
+//window.location.href = url;
+    window.open(url, "_blank");
 
 }
