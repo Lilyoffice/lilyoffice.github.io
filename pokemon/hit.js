@@ -41,7 +41,7 @@ function hit(Adt,Def,rate,power,natures){
             msg = "攻击方暴击了，";
         }
       // 属性克制关系
-        if (natures > 1){msg = msg + "效果拔群，";} else {msg = msg + "收效甚微，";} 
+        if (natures > 1){msg = msg + "效果拔群，";} else if(natures < 1) {msg = msg + "收效甚微，";} else {msg = msg;}
         hits = hits * natures
         // 属性一致性：
         var YZhits = hits * 1.5;
