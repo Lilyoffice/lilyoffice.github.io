@@ -58,7 +58,8 @@ case 1015:banpm=true;break;
 case 1016:banpm=true;break;
 case 1017:banpm=true;break;}
     return banpm}
-function runids() {
+function runids(ways) { // ways 1：日月ban 2：全精灵 ban 3：日月 4：全精灵
+    
     window.pokemonName = null
     window.pokemonNumber = null
     var pmid = parseInt(document.getElementById("pmid").value);
@@ -68,21 +69,22 @@ function runids() {
 // IE不适配 20230911
 // if (window.banlist.includes(pmid)) {
 // 适配IE工程：20230911
-if (banlist(pmid) == true) {
-    document.getElementById("result").innerHTML = "您提供的精灵序号为限制级宝可梦，请重试";
-} else if (pmid > 784) {
-    document.getElementById("result").innerHTML = "输入的精灵大于日月普通精灵的精灵序号，请重试";
-} else {
-    window.pokemonNumber = pmid;
-    prpl(pmid);
-}
-}
+    if (pmid > 1017){document.getElementById("result").innerHTML = "输入的精灵序号不是合法序号，请重试";return}
+  
+       if (banlist(pmid) == true && ways == 1 ||banlist(pmid) == true && ways == 2 ) {
+            document.getElementById("result").innerHTML = "您提供的精灵序号为限制级宝可梦，请重试";
+       } else if (pmid > 784 && ways == 3||pmid > 784 && ways == 1) {
+            document.getElementById("result").innerHTML = "输入的精灵大于日月普通精灵的精灵序号，请重试";
+       } else {
+            window.pokemonNumber = pmid;
+            prpl(pmid);
+
+    }
 
 function rands(){
     window.pokemonName = "";
     window.pokemonNumber = 0;
 var pmid = parseInt(Math.random() * 784 + 1);
-
 // Ban精灵：神兽
 
     
@@ -96,6 +98,8 @@ window.pokemonNumber = pmid;
 prpl(pmid);
 }
 }
+
+
 
 function prpl(pmid){
     var PmName="待确认精灵";
