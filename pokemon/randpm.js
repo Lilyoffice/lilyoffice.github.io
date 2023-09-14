@@ -69,7 +69,7 @@ function runids(ways) { // ways 1：日月ban 2：全精灵 ban 3：日月 4：�
 // IE不适配 20230911
 // if (window.banlist.includes(pmid)) {
 // 适配IE工程：20230911
-    if (pmid > 1017){document.getElementById("result").innerHTML = "输入的精灵序号不是合法序号，请重试";return}
+    if (isNaN(pmid) ||pmid < 1017){document.getElementById("result").innerHTML = "输入的精灵序号不是合法序号，请重试";return false}
   
        if (banlist(pmid) == true && ways == 1 ||banlist(pmid) == true && ways == 2 ) {
             document.getElementById("result").innerHTML = "您提供的精灵序号为限制级宝可梦，请重试";
