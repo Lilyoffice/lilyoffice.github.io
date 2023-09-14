@@ -80,6 +80,7 @@ function runids(ways) { // ways 1：日月ban 2：全精灵 ban 3：日月 4：�
             prpl(pmid);
 
     }
+}
 
 function rands(){
     window.pokemonName = "";
