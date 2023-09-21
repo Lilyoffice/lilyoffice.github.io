@@ -3,61 +3,8 @@
 //    window.banlist = [144,145,146,150,151,201,243,244,245,249,250,251,377,378,379,380,381,382,383,384,385,386,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,638,639,640,641,642,643,644,645,646,647,648,649,716,717,718,719,720,721];
 //}
 //适配IE
-function banlist(pmid){
-    var banpm=false;switch(pmid){case 772:banpm=true;break;case 773:banpm=true;break;case 144:banpm=true;break;case 145:banpm=true;break;case 146:banpm=true;break;case 150:banpm=true;break;case 151:banpm=true;break;case 201:banpm=true;break;case 243:banpm=true;break;case 244:banpm=true;break;case 245:banpm=true;break;case 249:banpm=true;break;case 250:banpm=true;break;case 251:banpm=true;break;case 377:banpm=true;break;case 378:banpm=true;break;case 379:banpm=true;break;case 380:banpm=true;break;case 381:banpm=true;break;case 382:banpm=true;break;case 383:banpm=true;break;case 384:banpm=true;break;case 385:banpm=true;break;case 386:banpm=true;break;case 480:banpm=true;break;case 481:banpm=true;break;case 482:banpm=true;break;case 483:banpm=true;break;case 484:banpm=true;break;case 485:banpm=true;break;case 486:banpm=true;break;case 487:banpm=true;break;case 488:banpm=true;break;case 489:banpm=true;break;case 490:banpm=true;break;case 491:banpm=true;break;case 492:banpm=true;break;case 493:banpm=true;break;case 494:banpm=true;break;case 638:banpm=true;break;case 639:banpm=true;break;case 640:banpm=true;break;case 641:banpm=true;break;case 642:banpm=true;break;case 643:banpm=true;break;case 644:banpm=true;break;case 645:banpm=true;break;case 646:banpm=true;break;case 647:banpm=true;break;case 648:banpm=true;break;case 649:banpm=true;break;case 716:banpm=true;break;case 717:banpm=true;break;case 718:banpm=true;break;case 719:banpm=true;break;case 720:banpm=true;break;case 721:banpm=true;break;
-case 785:banpm=true;break;
-case 786:banpm=true;break;
-case 787:banpm=true;break;
-case 788:banpm=true;break;
-case 789:banpm=true;break;
-case 790:banpm=true;break;
-case 791:banpm=true;break;
-case 792:banpm=true;break;
-case 793:banpm=true;break;
-case 794:banpm=true;break;
-case 795:banpm=true;break;
-case 796:banpm=true;break;
-case 797:banpm=true;break;
-case 798:banpm=true;break;
-case 799:banpm=true;break;
-case 800:banpm=true;break;
-case 801:banpm=true;break;
-case 802:banpm=true;break;
-case 803:banpm=true;break;
-case 804:banpm=true;break;
-case 805:banpm=true;break;
-case 806:banpm=true;break;
-case 807:banpm=true;break;
-case 808:banpm=true;break;
-case 809:banpm=true;break;
-case 888:banpm=true;break;
-case 889:banpm=true;break;
-case 890:banpm=true;break;
-case 891:banpm=true;break;
-case 892:banpm=true;break;
-case 893:banpm=true;break;
-case 894:banpm=true;break;
-case 895:banpm=true;break;
-case 896:banpm=true;break;
-case 897:banpm=true;break;
-case 898:banpm=true;break;
-case 905:banpm=true;break;
-case 1001:banpm=true;break;
-case 1002:banpm=true;break;
-case 1003:banpm=true;break;
-case 1004:banpm=true;break;
-// 不是神兽
-//case 1005:banpm=true;break;
-//case 1006:banpm=true;break;
-case 1007:banpm=true;break;
-case 1008:banpm=true;break;
-case 1009:banpm=true;break;
-case 1010:banpm=true;break;
-case 1014:banpm=true;break;
-case 1015:banpm=true;break;
-case 1016:banpm=true;break;
-case 1017:banpm=true;break;}
-    return banpm}
+const banpm={144:true,145:true,146:true,150:true,151:true,201:true,243:true,244:true,245:true,249:true,250:true,251:true,377:true,378:true,379:true,380:true,381:true,382:true,383:true,384:true,385:true,386:true,480:true,481:true,482:true,483:true,484:true,485:true,486:true,487:true,488:true,489:true,490:true,491:true,492:true,493:true,494:true,638:true,639:true,640:true,641:true,642:true,643:true,644:true,645:true,646:true,647:true,648:true,649:true,716:true,717:true,718:true,719:true,720:true,721:true,772:true,773:true,785:true,786:true,787:true,788:true,789:true,790:true,791:true,792:true,793:true,794:true,795:true,796:true,797:true,798:true,799:true,800:true,801:true,802:true,803:true,804:true,805:true,806:true,807:true,808:true,809:true,888:true,889:true,890:true,891:true,892:true,893:true,894:true,895:true,896:true,897:true,898:true,905:true,1001:true,1002:true,1003:true,1004:true,1007:true,1008:true,1009:true,1010:true,1014:true,1015:true,1016:true,1017:true,}
+function banlist(pmid){var banpms=banpm[pmid];if(banpms!=true){banpms=false;'Pokemon ID is '+pmid+' ,Pokemon can be used'}else{console.log('Pokemon ID is '+pmid+' ,Pokemon can be used')}return banpms}
 function runids(ways) { // ways 1：日月ban 2：全精灵 ban 3：日月 4：全精灵
     
     window.pokemonName = null
