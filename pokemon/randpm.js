@@ -4,7 +4,7 @@
 //}
 //适配IE
 const banpm={144:true,145:true,146:true,150:true,151:true,201:true,243:true,244:true,245:true,249:true,250:true,251:true,377:true,378:true,379:true,380:true,381:true,382:true,383:true,384:true,385:true,386:true,480:true,481:true,482:true,483:true,484:true,485:true,486:true,487:true,488:true,489:true,490:true,491:true,492:true,493:true,494:true,638:true,639:true,640:true,641:true,642:true,643:true,644:true,645:true,646:true,647:true,648:true,649:true,716:true,717:true,718:true,719:true,720:true,721:true,772:true,773:true,785:true,786:true,787:true,788:true,789:true,790:true,791:true,792:true,793:true,794:true,795:true,796:true,797:true,798:true,799:true,800:true,801:true,802:true,803:true,804:true,805:true,806:true,807:true,808:true,809:true,888:true,889:true,890:true,891:true,892:true,893:true,894:true,895:true,896:true,897:true,898:true,905:true,1001:true,1002:true,1003:true,1004:true,1007:true,1008:true,1009:true,1010:true,1014:true,1015:true,1016:true,1017:true,}
-function banlist(pmid){var banpms=banpm[pmid];if(banpms!=true){banpms=false;console.log('Pokemon ID is '+pmid+' ,Pokemon can be used')}else{console.log('Pokemon ID is '+pmid+' ,Pokemon can not be used')}return banpms}
+function banlist(pmid){var banpms=banpm[pmid];if(banpms!=true){banpms=false;console.log('Pokemon ID is '+pmid+' ,Pokemon can be used')}else{console.log('Pokemon ID is '+pmid+' ,Pokemon can not be used')}console.log('--*--' );return banpms}
 function runids(ways) { // ways 1：日月ban 2：全精灵 ban 3：日月 4：全精灵
     
     window.pokemonName = null;
@@ -33,8 +33,8 @@ function rands(){
     window.pokemonName = "";
     window.pokemonNumber = 0;
 var pmid = parseInt(Math.random() * 784 + 1);
-    console.log('Randomize ID is' + pmid)
-    console.log('--*--' )
+    console.log('Randomize ID is' + pmid);
+    console.log('--*--' );
 // Ban精灵：神兽
 
     
@@ -66,9 +66,11 @@ function prpl(pmid){
                 break;case 1011:PmName="来悲粗茶";break;case 1012:PmName="来悲粗茶";break;case 1013:PmName="来悲粗茶";break;case 1014:PmName="够赞狗";break;case 1015:PmName="愿增猿";break;case 1016:PmName="吉雉鸡";break;case 1017:PmName="厄诡椪";break;default:PmName="未知精灵";break}
    window.pokemonName = PmName;
    document.getElementById("result").innerHTML = "随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber;
+    
    document.getElementById("pmid").value = "";
     //0909调试显示
    console.log("debug log - lilyoffice:Pokemon Name is：" + window.pokemonName +",Pokemon ID is：" + window.pokemonNumber);
+    console.log('--*--' );
    
 }
 function runurl(){
