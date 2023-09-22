@@ -33,6 +33,8 @@ function rands(){
     window.pokemonName = "";
     window.pokemonNumber = 0;
 var pmid = parseInt(Math.random() * 784 + 1);
+    console.log('Randomize ID is' + pmid)
+    console.log('--*--' )
 // Ban精灵：神兽
 
     
@@ -66,7 +68,7 @@ function prpl(pmid){
    document.getElementById("result").innerHTML = "随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber;
    document.getElementById("pmid").value = "";
     //0909调试显示
-   console.log("debug log - lilyoffice:随机的精灵为：" + window.pokemonName +",随机序号为：" + window.pokemonNumber);
+   console.log("debug log - lilyoffice:Pokemon Name is：" + window.pokemonName +",Pokemon ID is：" + window.pokemonNumber);
    
 }
 function runurl(){
