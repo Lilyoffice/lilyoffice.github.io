@@ -83,6 +83,14 @@
         <pmlabel>[B][SP][T]</pmlabel>
     </pm>
     <pm>
+        <id>3311</id>
+        <name>圣光灵神</name>
+        <natureI>远古</natureI><natureII>圣灵</natureII>
+        <race>726</race><level>100</level><ind>31</ind><cha>勇敢</cha><chara>瞬杀5星</chara>
+        <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
+        <pmlabel>[B][SP][T]</pmlabel>
+    </pm>
+    <pm>
         <id>4515</id>
         <name>霍光</name>
         <natureI>水</natureI><natureII>神秘</natureII>
