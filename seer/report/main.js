@@ -2,7 +2,7 @@ window.onload = function() {
     // 230923 标准化用语
     // 使用 AJAX 加载外部 XML 文件
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "main.xml?ver=18A&Form=JS113Lily", true);//注意更新版本号
+    xhr.open("GET", "main.xml?ver=230923&Form=JS115Lily", true);//注意更新版本号
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 解析 XML 文件
