@@ -66,7 +66,23 @@
         <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
         <pmlabel>[S][SP]</pmlabel>
     </pm>
-        <pm>
+    <pm>
+        <id>3291</id>
+        <name>瀚宇星皇</name>
+        <natureI>自然</natureI><natureII>圣灵</natureII>
+        <race>780</race><level>100</level><ind>31</ind><cha>固执</cha><chara>瞬杀4星</chara>
+        <Adt>252</Adt><Adf>252</Adf><Apt>0</Apt><Apf>0</Apf><Spd>0</Spd><HP>6</HP>
+        <pmlabel>[S][SP]</pmlabel>
+    </pm>
+    <pm>
+        <id>2987</id>
+        <name>重生之翼</name>
+        <natureI>王</natureI><natureII>--</natureII>
+        <race>700</race><level>100</level><ind>31</ind><cha>固执</cha><chara>瞬杀5星</chara>
+        <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
+        <pmlabel>[B][SP][T]</pmlabel>
+    </pm>
+    <pm>
         <id>4515</id>
         <name>霍光</name>
         <natureI>水</natureI><natureII>神秘</natureII>
