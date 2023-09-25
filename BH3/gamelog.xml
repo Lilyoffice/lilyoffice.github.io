@@ -11,6 +11,15 @@
             <OtherEnvironment>火焰[机械]</OtherEnvironment>
             <OtherEffect>敌人受到的火焰元素伤害增加50%,冰冻元素伤害减少50%</OtherEffect>
         </Abyss>
+        <Abyss>
+            <StartTime>2023-09-25 17:00:00</StartTime>
+            <EndTime>2023-09-27 22【业魔】凯文[无属性]</Enemy>
+            <EnemyNature>无属性</EnemyNature>
+            <mainEnvironment>交响[无属性]</mainEnvironment>
+            <mainEffect>敌人受到的元素伤害增加20%,队伍中每有一种不同元素特性的女武神,该效果提升至30%/50%</mainEffect>
+            <OtherEnvironment>雷电[异能]</OtherEnvironment>
+            <OtherEffect>敌人受到的雷电元素伤害增加50%,物理伤害减少50%</OtherEffect>
+        </Abyss>
     </Abyssbox>
     <Fieldbox>
         <Field>
