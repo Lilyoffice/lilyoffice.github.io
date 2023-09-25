@@ -13,7 +13,8 @@
         </Abyss>
         <Abyss>
             <StartTime>2023-09-25 17:00:00</StartTime>
-            <EndTime>2023-09-27 22【业魔】凯文[无属性]</Enemy>
+            <EndTime>2023-09-27 22</EndTime>
+            <Enemy>【业魔】凯文[无属性]</Enemy>
             <EnemyNature>无属性</EnemyNature>
             <mainEnvironment>交响[无属性]</mainEnvironment>
             <mainEffect>敌人受到的元素伤害增加20%,队伍中每有一种不同元素特性的女武神,该效果提升至30%/50%</mainEffect>
