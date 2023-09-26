@@ -30,6 +30,13 @@
             <Enemy2>逐火十三英桀·阿波尼亚[生物]</Enemy2>
             <Enemy3>赫菲斯托斯[机械]</Enemy3>
         </Field>
+        <Field>
+            <StartTime>2023-09-26 04:00:00</StartTime>
+            <EndTime>2023-10-01 23:59:59</EndTime>
+            <Enemy1>苍骑士·月魂[生物]</Enemy1>
+            <Enemy2>托纳提乌-噬白之影[量子]</Enemy2>
+            <Enemy3>空之律者[生物]</Enemy3>
+        </Field>
     </Fieldbox>
 </HonkaiImpact3>
 <!--
@@ -49,4 +56,5 @@
             <Enemy2></Enemy2>
             <Enemy3></Enemy3>
         </Field>
+
 -->
