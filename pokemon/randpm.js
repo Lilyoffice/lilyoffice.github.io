@@ -35,9 +35,7 @@ function rands(){
 var pmid = parseInt(Math.random() * 784 + 1);
     console.log('Randomize ID is' + pmid);
     console.log('--*--' );
-// Ban精灵：神兽
-
-    
+// Ban精灵：神兽    
 // IE不适配 20230911
 // if (window.banlist.includes(pmid)) {
 // 适配IE工程：20230911
@@ -49,6 +47,27 @@ prpl(pmid);
 }
 }
 
+function randothers(ways){
+    window.pokemonName = "";
+    window.pokemonNumber = 0;
+    //2：全图鉴精灵 ban神兽 3：日月全精灵 4：全图鉴精灵
+    var allpm = 1017 // 全图鉴 这个注意变更
+    var usumpm = 809 // 阿罗拉图鉴 -*- 这个不变
+    if (ways == 2 || ways == 4){
+        var pmid = parseInt(Math.random() * allpm + 1); 
+        console.log('Randomize ID is' + pmid);
+        console.log('--*--' );
+        if (ways == 2){
+            if (banlist(pmid) == true) {
+                randothers(ways);
+            }
+        }
+    }else if(ways == 3){
+        var pmid = parseInt(Math.random() * usumpm + 1); 
+        console.log('Randomize ID is' + pmid);
+        console.log('--*--' );
+    }
+}
 
 
 function prpl(pmid){
