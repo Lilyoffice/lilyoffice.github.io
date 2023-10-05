@@ -67,6 +67,8 @@ function randothers(ways){
         console.log('Randomize ID is' + pmid);
         console.log('--*--' );
     }
+    window.pokemonNumber = pmid;
+    prpl(pmid);
 }
 
 
