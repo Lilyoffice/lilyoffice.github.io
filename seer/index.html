@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html  lang="zh-cn">
+    <head>
+	    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>精灵PID计算</title>
+        <style>
+            /*CSS*/
+            body{font-family:Arial,sans-serif;background-color:#f0f0f0;margin:0;padding:0;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+            .container{max-width:400px;padding:20px;background-color:#fff;border:1px solid #ccc;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+            h2{text-align:center;color:#333;}
+            div.csi{text-align:center;}
+            p{text-align:center;color:#666;}
+            label{display:block;margin-bottom:10px;font-weight:bold;color:#333;}
+            input{width:100%;padding:8px;border:1px solid #ccc;border-radius:3px;outline:none;}
+            button{display:block;width:100%;padding:10px;margin-top:20px;background-color:#cc00ff;color:#fff;border:none;border-radius:3px;cursor:pointer;}
+            button:hover{background-color:#cc00ff;}
+            #result{text-align:center;font-weight:bold;margin-top:20px;}
+            #result1{text-align:center;font-weight:bold;margin-top:20px;}
+            #msgs{text-align:center;font-weight:bold;margin-top:20px;}
+            /* #msgs1{text-align:center;font-weight:bold;margin-top:20px;} */
+            #HPS{text-align:center;font-weight:bold;margin-top:20px;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>PID计算</h2>
+            <div id="GetPmInf">
+                <label for="pmid">精灵序号：</label>
+                <input type="number" id="pmid">
+                <label for="pmnature1">精灵属性1：</label>
+                <input id="pmnature1">
+                <label for="pmnature2">精灵属性2：</label>
+                <input id="pmnature2">
+                <label for="ZZZ">精灵种族值：</label>
+                <input type="number" id="ZZZ">
+                <label for="Iv">精灵个体值：</label>
+                <input type="number" id="Iv">
+            
+                <label for="XG">精灵性格：</label>
+                <input id="XG">
+            </div>
+            <div id="res">
+                <div>精灵PID为：</div>
+                <div id="result">&nbsp;</div>
+            </div>
+            <div id="BUTTON1">
+                <button type="button" onclick="main()">计算</button>
+            </div>
+
+        </div>
+        <script src="PID.js?ID=231016"></script>
+    </body>
+</html>
