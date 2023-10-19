@@ -4,36 +4,36 @@ function main(){
     var na2 = document.getElementById("pmnature2").value;
     var zzz = parseInt(document.getElementById("ZZZ").value);
     var Iv = parseInt(document.getElementById("Iv").value);
-    var XG = parseInt(document.getElementById("XG").value);
+    var pxg = parseInt(document.getElementById("XG").value);
     a = natures(na1)
     b = natures(na2)
     NatureUID = a + b
     // 性格值
     var XGPID = null
-    if (XG == "孤独"){XGPID = "01";}
-    else if(XG == "固执"){XGPID = "02";}
-    else if(XG == "调皮"){XGPID = "03";}
-    else if(XG == "勇敢"){XGPID = "04";}
-    else if(XG == "大胆"){XGPID = "05";}
-    else if(XG == "顽皮"){XGPID = "06";}
-    else if(XG == "无虑"){XGPID = "07";}
-    else if(XG == "悠闲"){XGPID = "08";}
-    else if(XG == "保守"){XGPID = "09";}
-    else if(XG == "稳重"){XGPID = "00";}
-    else if(XG == "马虎"){XGPID = "21";}
-    else if(XG == "冷静"){XGPID = "22";}
-    else if(XG == "沉着"){XGPID = "23";}
-    else if(XG == "温顺"){XGPID = "24";}
-    else if(XG == "狂妄"){XGPID = "25";}
-    else if(XG == "胆小"){XGPID = "26";}
-    else if(XG == "急躁"){XGPID = "27";}
-    else if(XG == "开朗"){XGPID = "28";}
-    else if(XG == "天真"){XGPID = "29";}
-    else if(XG == "害羞"){XGPID = "99";}
-    else if(XG == "实干"){XGPID = "98";}
-    else if(XG == "坦率"){XGPID = "97";}
-    else if(XG == "浮躁"){XGPID = "96";}
-    else if(XG == "认真"){XGPID = "95";}
+    if (pxg == "孤独"){XGPID = "01";}
+    else if(pxg == "固执"){XGPID = "02";}
+    else if(pxg == "调皮"){XGPID = "03";}
+    else if(pxg == "勇敢"){XGPID = "04";}
+    else if(pxg == "大胆"){XGPID = "05";}
+    else if(pxg == "顽皮"){XGPID = "06";}
+    else if(pxg == "无虑"){XGPID = "07";}
+    else if(pxg == "悠闲"){XGPID = "08";}
+    else if(pxg == "保守"){XGPID = "09";}
+    else if(pxg == "稳重"){XGPID = "00";}
+    else if(pxg == "马虎"){XGPID = "21";}
+    else if(pxg == "冷静"){XGPID = "22";}
+    else if(pxg == "沉着"){XGPID = "23";}
+    else if(pxg == "温顺"){XGPID = "24";}
+    else if(pxg == "狂妄"){XGPID = "25";}
+    else if(pxg == "胆小"){XGPID = "26";}
+    else if(pxg == "急躁"){XGPID = "27";}
+    else if(pxg == "开朗"){XGPID = "28";}
+    else if(pxg == "天真"){XGPID = "29";}
+    else if(pxg == "害羞"){XGPID = "99";}
+    else if(pxg == "实干"){XGPID = "98";}
+    else if(pxg == "坦率"){XGPID = "97";}
+    else if(pxg == "浮躁"){XGPID = "96";}
+    else if(pxg == "认真"){XGPID = "95";}
     console.log("Get XG ID is " + XGPID);
     console.log("--*-- ");
     let PIDS = parseInt(String(pmid) + NatureUID + String(zzz) + String(Iv) + XGPID);
