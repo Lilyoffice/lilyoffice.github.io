@@ -4,7 +4,7 @@ function main(){
     var na2 = document.getElementById("pmnature2").value;
     var zzz = parseInt(document.getElementById("ZZZ").value);
     var Iv = parseInt(document.getElementById("Iv").value);
-    var pxg = parseInt(document.getElementById("XG").value);
+    var pxg = document.getElementById("xgr").value;
     a = natures(na1)
     b = natures(na2)
     NatureUID = a + b
