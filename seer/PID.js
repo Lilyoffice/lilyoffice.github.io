@@ -38,6 +38,8 @@ function main(){
     console.log("Get XG ID is " + XGPID);
     console.log("--*-- ");
     let PIDS = parseInt(String(pmid) + NatureUID + String(zzz) + String(Iv) + XGPID);
+    console.log(PIDS);
+    console.log("--*-- ");
     let hex = decToHex(PIDS)
     document.getElementById("result").innerHTML = hex
 
