@@ -9,7 +9,7 @@ function main(){
     b = natures(na2)
     NatureUID = a + b
     // 性格值
-    var XGPID = null
+    var XGPID = "99"
     if (pxg == "孤独"){XGPID = "01";}
     else if(pxg == "固执"){XGPID = "02";}
     else if(pxg == "调皮"){XGPID = "03";}
@@ -34,6 +34,7 @@ function main(){
     else if(pxg == "坦率"){XGPID = "97";}
     else if(pxg == "浮躁"){XGPID = "96";}
     else if(pxg == "认真"){XGPID = "95";}
+    else{XGPID = "98"}
     console.log("Get XG ID is " + XGPID);
     console.log("--*-- ");
     let PIDS = parseInt(String(pmid) + NatureUID + String(zzz) + String(Iv) + XGPID);
