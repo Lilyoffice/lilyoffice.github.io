@@ -34,6 +34,8 @@ function main(){
     else if(XG == "坦率"){XGPID = "97";}
     else if(XG == "浮躁"){XGPID = "96";}
     else if(XG == "认真"){XGPID = "95";}
+    console.log("Get XG ID is " + XGPID);
+    console.log("--*-- ");
     let PIDS = parseInt(String(pmid) + NatureUID + String(zzz) + String(Iv) + XGPID);
     let hex = decToHex(PIDS)
     document.getElementById("result").innerHTML = hex
@@ -68,11 +70,14 @@ function natures(naturename){
     else if (naturename == "轮回"){NatureUID="24";}
     else if (naturename == "虫"){NatureUID="25";}
     else if (naturename == "虚空"){NatureUID="26";}
+    console.log("Get Nateure ID is " + NatureUID);
+    console.log("--*-- ");
     return NatureUID
 }
 
 function decToHex(dec) {
     a = dec.toString(32).toUpperCase();
     console.log(a);
+    console.log("--*-- ");
     return a
 }
