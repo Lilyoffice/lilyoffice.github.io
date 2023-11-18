@@ -18,6 +18,7 @@
         <Adt>0</Adt><Adf>0</Adf><Apt>255</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
         <pmlabel>[S][SP]</pmlabel>
     </pm>
+    <!--年费团-->
     <pm>
         <id>4450</id>
         <name>逐界苍星</name>
@@ -89,6 +90,15 @@
         <race>726</race><level>100</level><ind>31</ind><cha>勇敢</cha><chara>瞬杀5星</chara>
         <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>0</Spd><HP>255</HP>
         <pmlabel>[B][SP][T]</pmlabel>
+    </pm>
+    <!--其他-->
+    <pm>
+        <id>4454</id>
+        <name>圣谕邪魔</name>
+        <natureI>混沌</natureI><natureII>圣灵</natureII>
+        <race>760</race><level>100</level><ind>31</ind><cha>开朗</cha><chara>待定</chara>
+        <Adt>255</Adt><Adf>0</Adf><Apt>0</Apt><Apf>0</Apf><Spd>255</Spd><HP>0</HP>
+        <pmlabel>[S][SP]</pmlabel>
     </pm>
     <pm>
         <id>4515</id>
