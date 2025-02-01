@@ -12,26 +12,26 @@
     -->
     
     <pm>
-        <id>281</id>
-        <name>奇鲁莉安</name>
+        <id>282</id>
+        <name>沙奈朵</name>
         <nature>超能·妖精</nature>
-        <level>20</level>
+        <level>38</level>
         <tx>同步</tx>
         <note>太晶属性：超能 40级开始解锁精灵王效果</note>
     </pm>
     <pm>
-        <id>5</id>
-        <name>火恐龙</name>
+        <id>6</id>
+        <name>喷火龙</name>
         <nature>火</nature>
-        <level>18</level>
+        <level>36</level>
         <tx>猛火</tx>
         <note>太晶属性：火</note>
     </pm>
     <pm>
-        <id>120</id>
-        <name>海星星</name>
+        <id>121</id>
+        <name>宝石海星/name>
         <nature>水</nature>
-        <level>18</level>
+        <level>36</level>
         <tx>自然回复</tx>
         <note>太晶属性：水</note>
     </pm>
@@ -39,7 +39,7 @@
         <id>548</id>
         <name>百合根娃娃</name>
         <nature>草</nature>
-        <level>18</level>
+        <level>36</level>
         <tx>叶绿素</tx>
         <note>太晶属性：草 后期可以变洗翠形态（后期矢车森林转化形态；并基础形态获得强化）</note>
     </pm>
