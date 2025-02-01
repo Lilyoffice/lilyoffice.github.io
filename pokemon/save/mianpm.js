@@ -1,18 +1,18 @@
 window.onload = function() {
-    var SaveTime = "2023/8/2 23:00"//存档时间
+    var SaveTime = "2025/2/1 23:00"//存档时间
     document.getElementById("Time").innerHTML=SaveTime
 
     var SaveName = "陆猛"//存档时间
     document.getElementById("Name").innerHTML=SaveName
 
-    var SaveOtherTrainName = "双笙、嘉德丽雅、卡芙卡"//同行人
+    var SaveOtherTrainName = "双笙、公孙离"//同行人
     document.getElementById("OName").innerHTML=SaveOtherTrainName
 
 // 以下内容注意修改
 
     var Area = "合众地区"//所在地区
-    var City = "立涌市"//所在位置
-    var HZ = "3 (包含特殊徽章 1 :随机精灵挑战 )" //徽章数
+    var City = "卡那兹市"//所在位置
+    var HZ = "5 (包含特殊徽章 1 :随机精灵挑战 )" //徽章数
     document.getElementById("Area").innerHTML=Area
     document.getElementById("City").innerHTML=City
     document.getElementById("HZ").innerHTML=HZ
