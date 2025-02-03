@@ -1,53 +1,148 @@
 <!DOCTYPE html>
-<html  lang="zh-cn">
-    <head>
-	    <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>精灵PID计算</title>
-        <style>
-            /*CSS*/
-            body{font-family:Arial,sans-serif;background-color:#f0f0f0;margin:0;padding:0;display:flex;justify-content:center;align-items:center;min-height:100vh;}
-            .container{max-width:400px;padding:20px;background-color:#fff;border:1px solid #ccc;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-            h2{text-align:center;color:#333;}
-            div.csi{text-align:center;}
-            p{text-align:center;color:#666;}
-            label{display:block;margin-bottom:10px;font-weight:bold;color:#333;}
-            input{width:100%;padding:8px;border:1px solid #ccc;border-radius:3px;outline:none;}
-            button{display:block;width:100%;padding:10px;margin-top:20px;background-color:#cc00ff;color:#fff;border:none;border-radius:3px;cursor:pointer;}
-            button:hover{background-color:#cc00ff;}
-            #result{text-align:center;font-weight:bold;margin-top:20px;}
-            #result1{text-align:center;font-weight:bold;margin-top:20px;}
-            #msgs{text-align:center;font-weight:bold;margin-top:20px;}
-            /* #msgs1{text-align:center;font-weight:bold;margin-top:20px;} */
-            #HPS{text-align:center;font-weight:bold;margin-top:20px;}
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h2>PID计算</h2>
-            <div id="GetPmInf">
-                <label for="pmid">精灵序号：</label>
-                <input type="number" id="pmid">
-                <label for="pmnature1">精灵属性1：</label>
-                <input id="pmnature1">
-                <label for="pmnature2">精灵属性2：</label>
-                <input id="pmnature2">
-                <label for="ZZZ">精灵种族值：</label>
-                <input type="number" id="ZZZ">
-                <label for="Iv">精灵个体值：</label>
-                <input type="number" id="Iv">
-                <label for="xgr">精灵性格：</label>
-                <input id="xgr">
-            </div>
-            <div id="res">
-                <div>精灵PID为：</div>
-                <div id="result">&nbsp;</div>
-            </div>
-            <div id="BUTTON1">
-                <button type="button" onclick="main()">计算</button>
-            </div>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛尔号主要精灵查询</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .search-container {
+            margin-bottom: 20px;
+        }
+        .result-container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
 
-        </div>
-        <script src="PID.js?ID=231019&#A##CARDNAME=GANBUKAOHE325&USERID=16A8CF2&MODE=F&CODE=7FMELJDL6V4TR6VGANB9DTB4ELTJS1VO2S6P20RMU1UKAUUOEB4UDFI2LJJIS060###"></script>
-    </body>
+<h1>赛尔号主要精灵查询</h1>
+
+<div class="search-container">
+    <label for="seer-id">精灵序号:</label>
+    <input type="text" id="seer-id" placeholder="输入精灵序号">
+    <button onclick="searchByID()">通过精灵序号查询</button>
+
+    <label for="seer-name">精灵名称:</label>
+    <input type="text" id="seer-name" placeholder="输入精灵名称">
+    <button onclick="searchByName()">通过精灵名称查询</button>
+</div>
+
+<div class="result-container">
+    <h2>查询结果</h2>
+    <table id="result-table">
+        <thead>
+            <tr>
+                <th>精灵序号</th>
+                <th>精灵名称</th>
+                <th>属性</th>
+                <th>攻击种族值</th>
+                <th>防御种族值</th>
+                <th>特攻种族值</th>
+                <th>特防种族值</th>
+                <th>速度种族值</th>
+                <th>体力种族值</th>
+                <th>种族值总和</th>
+                <th>攻击类型<br>（1-物理攻击 <br>2-特殊攻击 <br>3-双攻兼具）</th>
+                <th>魂印<br>（如果是None则需要等待更新）</th>
+                <th>第五技能<br>（如果是None则需要等待更新）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 查询结果将动态插入到这里 -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    let xmlData = '';
+
+// 页面加载时加载 XML 数据
+
+window.onload = function () {
+    fetch('https://lilyoffice.github.io/seer/SeerMainDex.xml?20250203V10')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('github网络响应不正常（XML没有成功加载）');
+            }
+            return response.text();
+        })
+        .then(data => {
+            xmlData = data;
+            console.log('XML 数据加载成功');
+        })
+        .catch(error => {
+            console.error('Error loading XML:', error);
+            alert('数据没有加载成功，烦请刷新重试');
+        });
+};
+function parseXML(xmlString) {
+    const parser = new DOMParser();
+    return parser.parseFromString(xmlString, "text/xml");
+}
+
+function searchByID() {
+    const seerID = document.getElementById('seer-id').value;
+    const xmlDoc = parseXML(xmlData);
+    const seer = Array.from(xmlDoc.querySelectorAll('SeerMainDex')).find(
+        seer => seer.querySelector('Seer_ID').textContent === seerID
+    );
+
+    displayResult(seer);
+}
+
+function searchByName() {
+    const seerName = document.getElementById('seer-name').value;
+    const xmlDoc = parseXML(xmlData);
+    const seer = Array.from(xmlDoc.querySelectorAll('SeerMainDex')).find(
+        seer => seer.querySelector('Seer_Name').textContent === seerName
+    );
+
+    displayResult(seer);
+}
+
+function displayResult(seer) {
+    const tableBody = document.querySelector('#result-table tbody');
+    tableBody.innerHTML = '';
+
+    if (seer) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+                <td>${seer.querySelector('Seer_ID').textContent}</td>
+                <td>${seer.querySelector('Seer_Name').textContent}</td>
+                <td>${seer.querySelector('Seer_Type').textContent}</td>
+                <td>${seer.querySelector('Species_Strength_Attack').textContent}</td>
+                <td>${seer.querySelector('Species_Strength_Defense').textContent}</td>
+                <td>${seer.querySelector('Species_Strength_Sp_Attack').textContent}</td>
+                <td>${seer.querySelector('Species_Strength_Sp_Defense').textContent}</td>
+                <td>${seer.querySelector('Species_Strength_Spd').textContent}</td>
+                <td>${seer.querySelector('Species_Strength_HP').textContent}</td>
+                <td>${seer.querySelector('Species_Strength').textContent}</td>
+                <td>${seer.querySelector('Attack_Type').textContent}</td>
+                <td>${seer.querySelector('Hun_Ying').textContent}</td>
+                <td>${seer.querySelector('Di_Wu').textContent}</td>
+                
+            `;
+            tableBody.appendChild(row);
+        } else {
+            tableBody.innerHTML = '<tr><td colspan="13">未找到匹配的结果，请反馈给月桂予以更新</td></tr>';
+        }
+    }
+</script>
+
+</body>
 </html>
