@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-01-29T21:28:00">
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-02-03T21:59:00">
+<!--上面两行不要动，generated后面时间可以改，格式不要变-->
+<!--
+  通用格式：
 <SeerMainDex>
-<Seer_ID>5000</Seer_ID>
-<Seer_Name>圣灵谱尼</Seer_Name>
-<Seer_Type>神灵</Seer_Type>
-<Species_Strength_Attack>110</Species_Strength_Attack>
-<Species_Strength_Defense>120</Species_Strength_Defense>
-<Species_Strength_Sp_Attack>150</Species_Strength_Sp_Attack>
-<Species_Strength_Sp_Defense>120</Species_Strength_Sp_Defense>
-<Species_Strength_Spd>140</Species_Strength_Spd>
-<Species_Strength_HP>180</Species_Strength_HP>
-<Species_Strength>820</Species_Strength>
-<Attack_Type>2</Attack_Type>
-<Hun_Ying>1、圣洁：免疫所有异常状态和能力下降状态；2、永恒：回合开始时若自身体力高于对手则当回合自身必定先手（boss无效）；3、轮回：受到致命伤害时残留1点血，同时回合结束后自身体力、pp值、能力等级返回上回合结束时状态（每场战斗仅触发1次，boss无效）；4、生命：每回合恢复自身最大体力1/4和随机2个技能1点pp值；5、能量：回合结束时附加自身已损失体力50%的固定伤害；6、元素：登场时消除对手回合类效果，消除成功则对手下1次技能无效（Boss无效）；7、虚无：受到伤害时，免疫下1受到 攻击伤害（Boss无效）。</Hun_Ying>
-<Di_Wu>神灵救世光 神灵系特攻 威力160 PP5 必中；消除对手回合类效果，消除成功3回合内对手无法通过自身技能恢复体力；未击败对手则下回合附加自身最大体力1/3的固伤；吸取对手200体力，自身体力低于1/2时吸取效果翻倍</Di_Wu>
-
+<Seer_ID></Seer_ID>
+<Seer_Name></Seer_Name>
+<Seer_Type></Seer_Type>
+<Species_Strength_Attack></Species_Strength_Attack>
+<Species_Strength_Defense></Species_Strength_Defense>
+<Species_Strength_Sp_Attack></Species_Strength_Sp_Attack>
+<Species_Strength_Sp_Defense></Species_Strength_Sp_Defense>
+<Species_Strength_Spd></Species_Strength_Spd>
+<Species_Strength_HP></Species_Strength_HP>
+<Species_Strength></Species_Strength>
+<Attack_Type></Attack_Type>
+<Hun_Ying></Hun_Ying>
+<Di_Wu></Di_Wu>
+</SeerMainDex>
+  -->
+<!-- 例子与解析 -->
+<SeerMainDex>
+<Seer_ID>5000</Seer_ID> <!-- 精灵序号，主键，也是搜索的关键 -->
+<Seer_Name>圣灵谱尼</Seer_Name> <!-- 精灵名称，次主键，搜索的关键 -->
+<Seer_Type>神灵</Seer_Type> <!-- 属性 双属性“超能 神秘”这样写 -->
+<!-- 如果有特训的，直接写特性后的种族值，两个第五的用<br>连接 -->
+<Species_Strength_Attack>110</Species_Strength_Attack> <!-- 攻击种族值 -->
+<Species_Strength_Defense>120</Species_Strength_Defense> <!-- 防御种族值 -->
+<Species_Strength_Sp_Attack>150</Species_Strength_Sp_Attack> <!-- 特攻种族值 -->
+<Species_Strength_Sp_Defense>120</Species_Strength_Sp_Defense> <!-- 特防种族值 -->
+<Species_Strength_Spd>140</Species_Strength_Spd> <!-- 速度种族值 -->
+<Species_Strength_HP>180</Species_Strength_HP> <!-- 体力种族值 -->
+<Species_Strength>820</Species_Strength> <!-- 种族值总和 -->
+<Attack_Type>2</Attack_Type><!-- 攻击类型 1-物理攻击 2-特殊攻击 3-双刀 -->
+<Hun_Ying>1、圣洁：免疫所有异常状态和能力下降状态；2、永恒：回合开始时若自身体力高于对手则当回合自身必定先手（boss无效）；3、轮回：受到致命伤害时残留1点血，同时回合结束后自身体力、pp值、能力等级返回上回合结束时状态（每场战斗仅触发1次，boss无效）；4、生命：每回合恢复自身最大体力1/4和随机2个技能1点pp值；5、能量：回合结束时附加自身已损失体力50%的固定伤害；6、元素：登场时消除对手回合类效果，消除成功则对手下1次技能无效（Boss无效）；7、虚无：受到伤害时，免疫下1受到 攻击伤害（Boss无效）。</Hun_Ying><!--魂印-->
+<Di_Wu>神灵救世光 神灵系特攻 威力160 PP5 必中；消除对手回合类效果，消除成功3回合内对手无法通过自身技能恢复体力；未击败对手则下回合附加自身最大体力1/3的固伤；吸取对手200体力，自身体力低于1/2时吸取效果翻倍</Di_Wu><!-- 两个第五的用<br>连接 -->
 </SeerMainDex>
 <!--更新从这里更新-->
 <!--250129更新-->
@@ -616,8 +636,8 @@
 <Species_Strength_HP>175</Species_Strength_HP>
 <Species_Strength>800</Species_Strength>
 <Attack_Type>2</Attack_Type>
-<Hun_Ying>None</Hun_Ying>
-<Di_Wu>None</Di_Wu>
+<Hun_Ying>星解：逐界苍星每次登场对手首次使用技能命中前，若对手不存在技能被解析则解析该技能并为自身附加1层未来奇点，被解析的技能无法选择直到逐界苍星下场； 星烁：未来奇点可以帮助逐界苍星免疫所受到的异常状态，每次免疫成功后未来奇点移除1层，最后1层未来奇点被移除时，消除对手回合类效果与能力提升状态；回合开始时逐界苍星根据自身未来奇点的层数获得以下效果，层数越多获得的效果越多，至多3层，下场后保留：1层：当回合对手的速度能力提升效果失效且自身计算攻击伤害时获得本系属性加成；2层：当回合对手的护盾效果失效且自身使用技能不会消耗PP值；3层：当回合对手的先制等级最高为3且自身使用技能后第五技能外所有技能PP值+1；星辉：回合开始时，若自身速度值高于对手则当回合自身所有技能先制+1，若自身体力值高于对手则当回合结束时自身全属性+1；星别：自身下场后解放所解析的技能，若为攻击技能则恢复自身1/3的最大体力，死亡下场时修改为己方下只出场精灵体力等于最大体力的100%，若为属性技能则恢复自身所有技能1点PP值，死亡下场时修改为己方下只出场精灵恢复全部PP值</Hun_Ying>
+<Di_Wu>彼空·真理重塑 机械 神秘特殊攻击 威力160 PP5 必中；吸取对手300点体力，若对手未受到固定伤害则额外100%使对手害怕；若对手存在技能被解析则清除对手被解析技能的PP值，若对手没有技能被解析，则解析对手当回合所使用的的技能；当回合击败对手则令自身3回合内回合类效果无法被消除。<br>彼空·根源重释 机械 神秘物理攻击 威力160 PP1 必中，再现本次登场所解析的技能（当回合触发的先制修改效果无法再现），若本次登场尚未解析技能或解析的技能与本技能同名，则附加300点真实伤害并恢复等量体力，若再现的技能为攻击技能，则造成的攻击伤害提升50%，若再现的技能为属性技能，则恢复自身所有其他技能1点PP值。</Di_Wu>
 </SeerMainDex>
 <SeerMainDex>
 <Seer_ID>4442</Seer_ID>
