@@ -1,22 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-02-03T21:59:00">
+<!-- 使用模板，目前只支持显示5个技能，如果需要可以找月桂调整前端,不使用的不要体现
     <seerjnlog>
-    <Seer_ID>5000</Seer_ID> <!-- 精灵序号，主键，也是搜索的关键 -->
-    <Seer_Name>圣灵谱尼</Seer_Name> <!-- 精灵名称，次主键，搜索的关键 -->
-    <jn1 Name="神灵救世光" PP="5" Types="神灵系特殊攻击" Power="160" Hit_Rate="必中" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
-        <Effect>必中；消除对手回合类效果，消除成功3回合内对手无法通过自身技能恢复体力；未击败对手则下回合附加自身最大体力1/3的固伤；吸取对手200体力，自身体力低于1/2时吸取效果翻倍</Effect><!--技能效果-->
-    </jn1>
-    <jn2 Name="测试1" PP="5" Types="神灵系特殊攻击" Power="150" Hit_Rate="95" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
-        <Effect>啦啦啦啦</Effect><!--技能效果-->
-    </jn2>
-    <jn3 Name="测试2" PP="15" Types="神灵系特殊攻击" Power="85" Hit_Rate="必中" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
-        <Effect>啦啦啦啦1</Effect><!--技能效果-->
-    </jn3>
-    <jn4 Name="测试3" PP="5" Types="属性技能" Power="0" Hit_Rate="必中" Critical_Hit_Rate="0"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
-        <Effect>2222</Effect><!--技能效果-->
-    </jn4>
-    <jn5 Name="测试4" PP="5" Types="神灵系特殊攻击" Power="0" Hit_Rate="必中" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
-        <Effect>33333</Effect><!--技能效果-->
-    </jn5>
+        <Seer_ID></Seer_ID> 
+        <Seer_Name></Seer_Name> 
+        <jn1 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn1>
+        <jn2 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn2>
+        <jn3 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn3>
+        <jn4 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn4>
+        <jn5 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn5>
+            
     </seerjnlog>
+-->
+    <seerjnlog>
+        <Seer_ID>5000</Seer_ID> <!-- 精灵序号，主键，也是搜索的关键 -->
+        <Seer_Name>圣灵谱尼</Seer_Name> <!-- 精灵名称，次主键，搜索的关键 -->
+        <jn1 Name="神灵救世光" PP="5" Types="神灵系特殊攻击" Power="160" Hit_Rate="必中" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
+            <Effect>必中；消除对手回合类效果，消除成功3回合内对手无法通过自身技能恢复体力；未击败对手则下回合附加自身最大体力1/3的固伤；吸取对手200体力，自身体力低于1/2时吸取效果翻倍</Effect><!--技能效果-->
+        </jn1>
+        <jn2 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn2>
+        <jn3 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn3>
+        <jn4 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn4>
+        <jn5 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+            <Effect></Effect>
+        </jn5>
+    </seerjnlog>
+    <seerjnlog>
+        <Seer_ID>3613</Seer_ID>
+        <Seer_Name>芳馨·茉蕊儿</Seer_Name>
+        <jn1 Name="王·春暖花开" PP="5" Types="草系特殊攻击" Power="160" Hit_Rate="必中" Critical_Hit_Rate="1/16">
+            <Effect>攻击时造成的伤害不会出现微弱（克制关系为微弱时变成普通）；消除对手回合类效果，消除成功则对手感染；无视对手免疫伤害效果；暴击率提升40%，每次使用额外提升10%，最高100%</Effect>
+        </jn1>
+        <jn2 Name="王·青山不语" PP="5" Types="草系特殊攻击" Power="95" Hit_Rate="100" Critical_Hit_Rate="2/16">
+            <Effect>先制+3；双倍吸取对手能力提升状态，吸取成功则对手下2回合先制-3；恢复自身1/4体力，同时给对手造成等量固伤，自身体力低于1/2时效果翻倍</Effect>
+        </jn2>
+        <jn3 Name="芳馨永存" PP="5" Types="属性攻击" Power="--" Hit_Rate="必中" Critical_Hit_Rate="--">
+            <Effect>全属性+1，自身体力高于1/2时强化效果翻倍；4回合内每回合恢复1/3体力值，并造成等量固伤；4回合内每回合吸取对手1/3最大体力；3回合内，若自身能力提升状态被消除则吸取对手最大体力的1/3</Effect>
+        </jn3>
+        <jn4 Name="生命长河" PP="5" Types="属性攻击" Power="--" Hit_Rate="必中" Critical_Hit_Rate="--">
+            <Effect>4回合内免疫并反弹所有受到的异常状态；4回合内不受能力下降技能影响；3回合内，每回合开始时使对手3项能力值-1，并附加到自己身上；3回合内受到攻击则对手感染，未触发则对手2回合内对手无法使用属性技能</Effect>
+        </jn4>
+
+            
+    </seerjnlog>    
 </dataroot>

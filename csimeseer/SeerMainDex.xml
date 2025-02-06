@@ -1408,7 +1408,7 @@
 <Species_Strength_Spd>125</Species_Strength_Spd>
 <Species_Strength_HP>170</Species_Strength_HP>
 <Species_Strength>715</Species_Strength>
-<Hun_Ying>None</Hun_Ying>
+<Hun_Ying>回合开始时，若当回合对手选择使用攻击技能，则使对手随机1个技能PP值归零且当回合自身受到的攻击伤害不超过最大体力的1/2；回合开始时，若当回合对手选择使用属性技能，则当回合自身免疫所有异常状态和能力下降状态（boss无效）；&#10;回合结束后，若自身死亡，则令己方下只精灵出战时获得500点护盾和500点护罩且免疫下1次受到的异常状态（boss有效）</Hun_Ying>
 <SPLabel>1</SPLabel>
 </SeerMainDex>
 <SeerMainDex>
