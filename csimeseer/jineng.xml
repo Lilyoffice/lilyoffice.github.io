@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-02-03T21:59:00">
+    <seerjnlog>
+    <Seer_ID>5000</Seer_ID> <!-- 精灵序号，主键，也是搜索的关键 -->
+    <Seer_Name>圣灵谱尼</Seer_Name> <!-- 精灵名称，次主键，搜索的关键 -->
+    <jn1 Name="神灵救世光" PP="5" Types="神灵系特殊攻击" Power="160" Hit_Rate="必中" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
+        <Effect>必中；消除对手回合类效果，消除成功3回合内对手无法通过自身技能恢复体力；未击败对手则下回合附加自身最大体力1/3的固伤；吸取对手200体力，自身体力低于1/2时吸取效果翻倍</Effect><!--技能效果-->
+    </jn1>
+    <jn2 Name="测试1" PP="5" Types="神灵系特殊攻击" Power="150" Hit_Rate="95" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
+        <Effect>啦啦啦啦</Effect><!--技能效果-->
+    </jn2>
+    <jn3 Name="测试2" PP="15" Types="神灵系特殊攻击" Power="85" Hit_Rate="必中" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
+        <Effect>啦啦啦啦1</Effect><!--技能效果-->
+    </jn3>
+    <jn4 Name="测试3" PP="5" Types="属性技能" Power="0" Hit_Rate="必中" Critical_Hit_Rate="0"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
+        <Effect>2222</Effect><!--技能效果-->
+    </jn4>
+    <jn5 Name="测试4" PP="5" Types="神灵系特殊攻击" Power="0" Hit_Rate="必中" Critical_Hit_Rate="1/16"><!--name为技能名称 PP为PP Types为技能属性（如：超能系特殊攻击）Power为技能威力 Hit_Rate为命中率 Critical_Hit_Rate为暴击率-->
+        <Effect>33333</Effect><!--技能效果-->
+    </jn5>
+    </seerjnlog>
+</dataroot>
