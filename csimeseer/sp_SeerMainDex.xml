@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-02-03T21:59:00">
+<SeerMainDex>
+  <Seer_ID>3613</Seer_ID>
+  <Seer_Name>芳馨·茉蕊儿</Seer_Name>
+  <Seer_Type>草</Seer_Type>
+  <Species_Strength_Attack>80</Species_Strength_Attack>
+  <Species_Strength_Defense>125</Species_Strength_Defense>
+  <Species_Strength_Sp_Attack>140</Species_Strength_Sp_Attack>
+  <Species_Strength_Sp_Defense>125</Species_Strength_Sp_Defense>
+  <Species_Strength_Spd>135</Species_Strength_Spd>
+  <Species_Strength_HP>185</Species_Strength_HP>
+  <Species_Strength>790</Species_Strength>
+  <Hun_Ying>None</Hun_Ying>
+</SeerMainDex>
+</dataroot>
