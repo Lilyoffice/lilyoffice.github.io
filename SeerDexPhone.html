@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛尔号主要精灵查询</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .centers {
+            text-align: center;
+        }
+
+        .lefts {
+            text-align: left;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #result-text {
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1100px;
+            font-size: 15px;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            font-family: 'FangSong_GB2312', 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>赛尔号主要精灵查询</h1>
+
+        <div class="centers">
+            <label for="seer-id">精灵序号:</label>
+            <input type="text" id="seer-id" placeholder="输入精灵序号">
+            <button onclick="searchByID()">查询</button>
+            <br>
+            <label for="seer-name">精灵名称:</label>
+            <input type="text" id="seer-name" placeholder="输入精灵名称">
+            <button onclick="searchByName()">查询</button>
+        </div>
+
+        <div class="lefts">
+            <div id="result-text">
+                <!-- 查询结果将动态插入到这里 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let xmlData = '';
+        let skillData = '';
+
+        // 页面加载时加载 XML 数据
+        window.onload = function () {
+            // 加载精灵主数据 XML
+            fetch('SeerMainDex.xml')
+               .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应不正常（SeerMainDex.xml 没有成功加载）');
+                    }
+                    return response.text();
+                })
+               .then(data => {
+                    xmlData = data;
+                    console.log('SeerMainDex.xml 数据加载成功');
+                })
+               .catch(error => {
+                    console.error('Error loading SeerMainDex.xml:', error);
+                    alert('SeerMainDex.xml 数据没有加载成功，烦请刷新重试');
+                });
+
+            // 加载技能数据 XML
+            fetch('jineng.xml')
+               .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应不正常（jineng.xml 没有成功加载）');
+                    }
+                    return response.text();
+                })
+               .then(data => {
+                    skillData = data;
+                    console.log('jineng.xml 数据加载成功');
+                })
+               .catch(error => {
+                    console.error('Error loading jineng.xml:', error);
+                    alert('jineng.xml 数据没有加载成功，烦请刷新重试');
+                });
+        };
+
+        function parseXML(xmlString) {
+            const parser = new DOMParser();
+            return parser.parseFromString(xmlString, "text/xml");
+        }
+
+        // 统一处理换行符，包括实际换行符和实体编码的换行符
+        function replaceNewlines(text) {
+            return text.replace(/(\r\n|\n|\r|&#10;)/g, '<br>');
+        }
+
+        function searchByID() {
+            const seerID = document.getElementById('seer-id').value;
+            const xmlDoc = parseXML(xmlData);
+            const seer = Array.from(xmlDoc.querySelectorAll('SeerMainDex')).find(
+                seer => seer.querySelector('Seer_ID').textContent === seerID
+            );
+
+            displayResult(seer);
+        }
+
+        function searchByName() {
+            const seerName = document.getElementById('seer-name').value;
+            const xmlDoc = parseXML(xmlData);
+            const seer = Array.from(xmlDoc.querySelectorAll('SeerMainDex')).find(
+                seer => seer.querySelector('Seer_Name').textContent === seerName
+            );
+
+            displayResult(seer);
+        }
+        function gosp(seerid) {
+            
+            var url="SeerDexPhoneSP.html?id=" + seerid
+            window.open(url);
+        }
+        function displayResult(seer) {
+            const resultText = document.getElementById('result-text');
+            resultText.innerHTML = '';
+
+            if (seer) {
+                const table = `
+                    <table>
+                        <tr>
+                            <th>攻击</th>
+                            <td>${seer.querySelector('Species_Strength_Attack').textContent}</td>
+                            <th>防御</th>
+                            <td>${seer.querySelector('Species_Strength_Defense').textContent}</td>
+                        </tr>
+                        <tr>
+                            <th>特攻</th>
+                            <td>${seer.querySelector('Species_Strength_Sp_Attack').textContent}</td>
+                            <th>特防</th>
+                            <td>${seer.querySelector('Species_Strength_Sp_Defense').textContent}</td>
+                        </tr>
+                        <tr>
+                            <th>速度</th>
+                            <td>${seer.querySelector('Species_Strength_Spd').textContent}</td>
+                            <th>体力</th>
+                            <td>${seer.querySelector('Species_Strength_HP').textContent}</td>
+                        </tr>
+                        <tr>
+                            <th>总和</th>
+                            <td colspan="3">${seer.querySelector('Species_Strength').textContent}</td>
+                        </tr>
+
+                    </table>
+                `;
+                
+                if (seer.querySelector('Hun_Ying').textContent == "None") {
+                    var Hun_Ying = "数据库正在更新该数据，请耐心等待";
+                } else {
+                    var Hun_Ying = replaceNewlines(seer.querySelector('Hun_Ying').textContent);
+                }
+               
+                if (seer.querySelector('SPLabel').textContent == "1") {
+                    var a = seer.querySelector('Seer_ID').textContent;
+                    var spbutton = `该精灵具有特殊状态<button onclick="gosp(${a})">点击查看</button>`;
+                }
+
+
+                // 查询技能信息
+                const skillDoc = parseXML(skillData);
+                const seerSkills = Array.from(skillDoc.querySelectorAll('seerjnlog')).find(
+                    skillEntry => skillEntry.querySelector('Seer_ID').textContent === seer.querySelector('Seer_ID').textContent
+                );
+
+                let skillText = '';
+                if (seerSkills) {
+                    for (let i = 1; i <= 5; i++) {
+                        const skill = seerSkills.querySelector(`jn${i}`);
+                        if (skill) {
+                            const name = skill.getAttribute('Name');
+                            const pp = skill.getAttribute('PP');
+                            const types = skill.getAttribute('Types');
+                            const power = skill.getAttribute('Power');
+                            const hitRate = skill.getAttribute('Hit_Rate');
+                            const criticalRate = skill.getAttribute('Critical_Hit_Rate');
+                            const effect = skill.querySelector('Effect').textContent;
+
+                            skillText += `<br>技能${i}: ${name}<br>PP: ${pp}<br>类型: ${types}<br>威力: ${power}<br>命中: ${hitRate}<br>暴击率: ${criticalRate}<br>技能效果: ${effect}<br>`;
+                        }
+                    }
+                }
+
+                if (skillText === '') {
+                    skillText = '<br>技能数据库正在更新该数据，请耐心等待';
+                }
+
+                const text = `
+                    <h2>查询结果</h2>
+                    精灵序号: ${seer.querySelector('Seer_ID').textContent}<br>
+                    精灵名称: ${seer.querySelector('Seer_Name').textContent}<br>
+                    属性: ${seer.querySelector('Seer_Type').textContent}<br>
+                    <div class="centers">种族值<br>
+                    ${table}
+                    ${spbutton}<br>
+                    </div><br>
+                    
+                    魂印: <br>${Hun_Ying}<br><br>
+                    ${skillText}
+                `;
+
+                resultText.innerHTML = text;
+            } else {
+                resultText.textContent = '未找到匹配的结果，请反馈给月桂予以更新';
+            }
+        }
+    </script>
+</body>
+
+</html>
