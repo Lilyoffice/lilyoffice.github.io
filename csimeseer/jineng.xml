@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-02-03T21:59:00">
+<!--上面两行不要动，generated后面时间可以改，格式不要变-->
 <!-- 使用模板，目前只支持显示5个技能，如果需要可以找月桂调整前端,不使用的不要体现
     <seerjnlog>
         <Seer_ID></Seer_ID> 
