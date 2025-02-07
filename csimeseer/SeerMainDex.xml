@@ -2,20 +2,20 @@
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-02-03T21:59:00">
 <!--上面两行不要动，generated后面时间可以改，格式不要变-->
 <!--
-  通用格式：
+  通用格式 空格请删除（谢谢甲哥）：
 <SeerMainDex>
-<Seer_ID></Seer_ID>
-<Seer_Name></Seer_Name>
-<Seer_Type></Seer_Type>
-<Species_Strength_Attack></Species_Strength_Attack>
-<Species_Strength_Defense></Species_Strength_Defense>
-<Species_Strength_Sp_Attack></Species_Strength_Sp_Attack>
-<Species_Strength_Sp_Defense></Species_Strength_Sp_Defense>
-<Species_Strength_Spd></Species_Strength_Spd>
-<Species_Strength_HP></Species_Strength_HP>
-<Species_Strength></Species_Strength>
-<Hun_Ying></Hun_Ying>
-<SPLabel>0</SPLabel>
+<Seer_ID>   </Seer_ID>
+<Seer_Name>   </Seer_Name>
+<Seer_Type>   </Seer_Type>
+<Species_Strength_Attack>    </Species_Strength_Attack>
+<Species_Strength_Defense>   </Species_Strength_Defense>
+<Species_Strength_Sp_Attack>    </Species_Strength_Sp_Attack>
+<Species_Strength_Sp_Defense>    </Species_Strength_Sp_Defense>
+<Species_Strength_Spd>    </Species_Strength_Spd>
+<Species_Strength_HP>    </Species_Strength_HP>
+<Species_Strength>    </Species_Strength>
+<Hun_Ying>    </Hun_Ying>
+<SPLabel>    </SPLabel>
 </SeerMainDex>
   -->
 <!-- 例子与解析 -->
@@ -31,10 +31,10 @@
 <Species_Strength_Spd>140</Species_Strength_Spd> <!-- 速度种族值 -->
 <Species_Strength_HP>180</Species_Strength_HP> <!-- 体力种族值 -->
 <Species_Strength>820</Species_Strength> <!-- 种族值总和 -->
-<Attack_Type>2</Attack_Type><!-- 攻击类型 1-物理攻击 2-特殊攻击 3-双刀 -->
+
  <!--下面两个None的是我还来得及更新的 --> 
 <Hun_Ying>1、圣洁：免疫所有异常状态和能力下降状态；&#10;2、永恒：回合开始时若自身体力高于对手则当回合自身必定先手（boss无效）；&#10;3、轮回：受到致命伤害时残留1点血，同时回合结束后自身体力、pp值、能力等级返回上回合结束时状态（每场战斗仅触发1次，boss无效）；&#10;4、生命：每回合恢复自身最大体力1/4和随机2个技能1点pp值；&#10;5、能量：回合结束时附加自身已损失体力50%的固定伤害；&#10;6、元素：登场时消除对手回合类效果，消除成功则对手下1次技能无效（Boss无效）；&#10;7、虚无：受到伤害时，免疫下1受到 攻击伤害（Boss无效）。</Hun_Ying><!--魂印-->
-<SPLabel>0</SPLabel>
+<SPLabel>0</SPLabel><!-- 有无强化形态 0-无 1-有 -->
 </SeerMainDex>
 <!--更新从这里更新-->
 <!--250129更新-->
