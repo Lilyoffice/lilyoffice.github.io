@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2025-02-03T21:59:00">
 <!--上面两行不要动，generated后面时间可以改，格式不要变-->
-<!-- 使用模板，目前只支持显示5个技能，如果需要可以找月桂调整前端,不使用的不要体现
+<!-- 使用模板，目前只支持显示5个技能，如果需要可以找月桂调整前端,不使用的不要体现（空格烦请甲哥删除，jn2-jn5如果没有也需要删除。。。。）
     <seerjnlog>
-        <Seer_ID></Seer_ID> 
-        <Seer_Name></Seer_Name> 
-        <jn1 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
-            <Effect></Effect>
+        <Seer_ID>    </Seer_ID> 
+        <Seer_Name>    </Seer_Name> 
+        <jn1 Name="    " PP="    " Types="    " Power="    " Hit_Rate="    " Critical_Hit_Rate="    ">
+            <Effect>    </Effect>
         </jn1>
-        <jn2 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
+        <jn2 Name="    " PP="    " Types="    " Power="    " Hit_Rate="    " Critical_Hit_Rate="    ">
             <Effect></Effect>
         </jn2>
-        <jn3 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
-            <Effect></Effect>
+        <jn3 Name="    " PP="    " Types="    " Power="    " Hit_Rate="    " Critical_Hit_Rate="    ">
+            <Effect>    </Effect>
         </jn3>
-        <jn4 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
-            <Effect></Effect>
+        <jn4 Name="    " PP="    " Types="    " Power="    " Hit_Rate="    " Critical_Hit_Rate="    ">
+            <Effect>    </Effect>
         </jn4>
-        <jn5 Name="" PP="" Types="" Power="" Hit_Rate="" Critical_Hit_Rate="">
-            <Effect></Effect>
+        <jn5 Name="    " PP="    " Types="    " Power="    " Hit_Rate="    " Critical_Hit_Rate="    ">
+            <Effect>    </Effect>
         </jn5>
             
     </seerjnlog>
