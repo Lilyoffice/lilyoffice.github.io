@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新随机对战客户端</title>
+    <style>
+        /* 通用样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 两列布局样式 */
+        .container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .player-column {
+            width: 45%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* 手机端样式 */
+        @media (max-width: 768px) {
+            .player-column {
+                width: 90%;
+            }
+        }
+
+        /* 按钮样式 */
+        #reroll-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <script>
+        // 禁止的宝可梦 ID 数组
+        var banpm = [144, 145, 146, 150, 151, 201, 243, 244, 245, 249, 250, 251, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 716, 717, 718, 719, 720, 721, 772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1009, 1010, 1014, 1015, 1016, 1017];
+
+        window.onload = function () {
+            //alert('即将下载数据文件，可能需要100KB的流量消耗');
+            randpm();
+        };
+
+        // 检查宝可梦是否被禁止
+        function banlist(pmid, player) {
+            var isBanned = banpm.indexOf(pmid) > -1;
+            var message = isBanned ?
+                'Player' + player + '\'s Randomize Pokémon ID is:  ' + pmid + ' ,Pokemon can\'t use in this game' :
+                'Player' + player + '\'s Randomize Pokémon ID is:  ' + pmid + ' ,Pokemon can use in this game';
+            console.log(message);
+            console.log('--*--');
+            return isBanned;
+        }
+
+        // 从 XML 文件中获取宝可梦数据
+        function getPokemonDataFromXml() {
+            return new Promise(function (resolve, reject) {
+                var xhr;
+                if (window.XMLHttpRequest) {
+                    xhr = new XMLHttpRequest();
+                } else {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xhr.open('GET', 'pmdex.xml', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            var xmlDoc = xhr.responseXML;
+                            var pmdexElements = xmlDoc.getElementsByTagName('pmdex');
+                            var pokemonData = {};
+                            for (var i = 0; i < pmdexElements.length; i++) {
+                                var pmIdElement = pmdexElements[i].getElementsByTagName('pm_ID')[0];
+                                var pmid = parseInt(pmIdElement.textContent);
+                                pokemonData[pmid] = {
+                                    id: pmid,
+                                    name: pmdexElements[i].getElementsByTagName('pm_Name')[0].textContent,
+                                    hps: pmdexElements[i].getElementsByTagName('HPS')[0].textContent,
+                                    attack: pmdexElements[i].getElementsByTagName('Attack')[0].textContent,
+                                    defense: pmdexElements[i].getElementsByTagName('Defense')[0].textContent,
+                                    spAttack: pmdexElements[i].getElementsByTagName('SP_Attack')[0].textContent,
+                                    spDefense: pmdexElements[i].getElementsByTagName('SP_Defense')[0].textContent,
+                                    spd: pmdexElements[i].getElementsByTagName('Spd')[0].textContent
+                                };
+                            }
+                            resolve(pokemonData);
+                        } else {
+                            reject(new Error('Failed to load pmdex.xml'));
+                        }
+                    }
+                };
+                xhr.send();
+            });
+        }
+
+        // 随机生成宝可梦 ID
+        function randpm() {
+            window.pokemonNamepaly1 = NaN;
+            window.pokemonNumberpaly1 = 0;
+            window.pokemonNamepaly2 = NaN;
+            window.pokemonNumberpaly2 = 0;
+            var randpmid = 784;
+            var pmid1, pmid2;
+            var valid = false;
+
+            getPokemonDataFromXml().then(function (pokemonData) {
+                while (!valid) {
+                    pmid1 = parseInt(Math.random() * randpmid + 1);
+                    pmid2 = parseInt(Math.random() * randpmid + 1);
+
+                    if (banlist(pmid1, 1)) {
+                        console.log('Player1\'s Restricted - level Pokémon, retrying.');
+                        console.log('--*--');
+                        continue;
+                    }
+
+                    if (banlist(pmid2, 2)) {
+                        console.log('Player2\'s Restricted - level Pokémon, retrying.');
+                        console.log('--*--');
+                        continue;
+                    }
+
+                    if (pmid1 === pmid2) {
+                        console.log('Two randomly selected Pokémon are the same. Retrying.');
+                        console.log('--*--');
+                        continue;
+                    }
+
+                    if (!pokemonData[pmid1] || !pokemonData[pmid2]) {
+                        console.log('One or both Pokémon IDs are not in pmdex.xml. Retrying.');
+                        continue;
+                    }
+
+                    valid = true;
+                }
+
+                var player1Data = pokemonData[pmid1];
+                var player2Data = pokemonData[pmid2];
+
+                function calculateStats(data, pmid) {
+                    var hp = parseInt(data.hps) * 2 + 20 + 110;
+                    if (pmid === 292) {
+                        hp = 1;
+                    }
+                    var attack = parseInt(data.attack);
+                    var spAttack = parseInt(data.spAttack);
+                    var adt = attack > spAttack ?
+                        parseInt(((attack * 2 + 31 + 252 / 4) + 5) * 1.1) :
+                        parseInt(((attack * 2) + 5) * 0.9);
+                    var sp_adt = attack > spAttack ?
+                        parseInt(((spAttack * 2) + 5) * 0.9) :
+                        parseInt(((spAttack * 2 + 31 + 252 / 4) + 5) * 1.1);
+                    var def = parseInt(((parseInt(data.defense) * 2 + 20) + 5) * 1);
+                    var sp_def = parseInt(((parseInt(data.spDefense) * 2 + 20) + 5) * 1);
+                    var spd = parseInt(((parseInt(data.spd) * 2 + 31 + 252 / 4) + 5) * 1);
+                    return {
+                        hp: hp,
+                        adt: adt,
+                        sp_adt: sp_adt,
+                        def: def,
+                        sp_def: sp_def,
+                        spd: spd
+                    };
+                }
+
+                var player1Stats = calculateStats(player1Data, pmid1);
+                var player2Stats = calculateStats(player2Data, pmid2);
+
+                window.playerhp1 = player1Stats.hp;
+                window.playerhp2 = player2Stats.hp;
+                window.playeradt1 = player1Stats.adt;
+                window.playeradt2 = player2Stats.adt;
+                window.playerdef1 = player1Stats.def;
+                window.playerdef2 = player2Stats.def;
+                window.playersp_adt1 = player1Stats.sp_adt;
+                window.playersp_adt2 = player2Stats.sp_adt;
+                window.playersp_def1 = player1Stats.sp_def;
+                window.playersp_def2 = player2Stats.sp_def;
+                window.playerspd1 = player1Stats.spd;
+                window.playerspd2 = player2Stats.spd;
+
+                // 输出到 HTML 页面
+                var container = document.createElement('div');
+                container.className = 'container';
+
+                var player1Column = document.createElement('div');
+                player1Column.className = 'player-column';
+                player1Column.innerHTML = '<h2>玩家 1</h2>' +
+                    '<p>精灵序号: ' + player1Data.id + '</p>' +
+                    '<p>精灵名称: ' + player1Data.name + '</p>' +
+                    '<p>精灵面板</p>' +
+                    '<p>体力: ' + player1Stats.hp + '</p>' +
+                    '<p>攻击: ' + player1Stats.adt + '</p>' +
+                    '<p>防御: ' + player1Stats.def + '</p>' +
+                    '<p>特殊攻击: ' + player1Stats.sp_adt + '</p>' +
+                    '<p>特殊防御: ' + player1Stats.sp_def + '</p>' +
+                    '<p>速度: ' + player1Stats.spd + '</p>';
+
+                var player2Column = document.createElement('div');
+                player2Column.className = 'player-column';
+                player2Column.innerHTML = '<h2>玩家 2</h2>' +
+                    '<p>ID: ' + player2Data.id + '</p>' +
+                    '<p>Name: ' + player2Data.name + '</p>' +
+                    '<p>精灵面板</p>' +
+                    '<p>体力: ' + player2Stats.hp + '</p>' +
+                    '<p>攻击: ' + player2Stats.adt + '</p>' +
+                    '<p>防御: ' + player2Stats.def + '</p>' +
+                    '<p>特殊攻击: ' + player2Stats.sp_adt + '</p>' +
+                    '<p>特殊防御: ' + player2Stats.sp_def + '</p>' +
+                    '<p>速度: ' + player2Stats.spd + '</p>';
+
+                container.appendChild(player1Column);
+                container.appendChild(player2Column);
+
+                // 移除之前的宝可梦信息和按钮
+                var oldContainer = document.querySelector('.container');
+                var oldButton = document.getElementById('reroll-button');
+                if (oldContainer) {
+                    oldContainer.parentNode.removeChild(oldContainer);
+                }
+                if (oldButton) {
+                    oldButton.parentNode.removeChild(oldButton);
+                }
+
+                document.body.appendChild(container);
+
+                // 创建按钮
+                var button = document.createElement('button');
+                button.id = 'reroll-button';
+                button.textContent = '重新随机';
+                button.addEventListener('click', randpm);
+
+                document.body.appendChild(button);
+            }).catch(function (error) {
+                console.error('An error occurred:', error);
+            });
+        }
+    </script>
+</body>
+
+</html>
