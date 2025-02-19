@@ -403,10 +403,10 @@ var banpm = [
     document.getElementById("msg21").style.color = "red";
     document.getElementById("msg3").style.color = "red";
     document.getElementById("msg4").style.color = "red";
-    //document.getElementById("power1").value = "";
-    //document.getElementById("rate1").value = "";
-    //document.getElementById("natures1").value = "";
-    //document.getElementById("power2").value = "";
-    //document.getElementById("rate2").value = "";
-    //document.getElementById("natures2").value = "";
+    document.getElementById("power1").value = "";
+    document.getElementById("rate1").value = "";
+    document.getElementById("natures1").value = "";
+    document.getElementById("power2").value = "";
+    document.getElementById("rate2").value = "";
+    document.getElementById("natures2").value = "";
 }
