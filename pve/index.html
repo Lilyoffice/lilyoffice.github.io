@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新随机对战客户端</title>
+    <style>
+        /* 通用样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 两列布局样式 */
+        .container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .player-column {
+            width: 45%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* 手机端样式 */
+        @media (max-width: 768px) {
+            .player-column {
+                width: 90%;
+            }
+        }
+
+        /* 按钮样式 */
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="mainapp"></div>
+    <div class="container">
+    <div class="player-column"><!--玩家1相关-->
+        <h2>玩家1伤害计算</h2>
+        <label for="power1">威力：</label>
+        <input type="number" id="power1">
+        <label for="rate1">命中：</label>
+        <input type="number" id="rate1">
+        <br>
+        <label for="natures1">属性克制系数：</label>
+        <input type="number" id="natures1">
+    </div>
+    <div class="player-column"><!--玩家2相关-->
+        <h2>玩家2伤害计算</h2>
+        <label for="power2">威力：</label>
+        <input type="number" id="power2">
+        <label for="rate2">命中：</label>
+        <input type="number" id="rate2">
+        <br>
+        <label for="natures2">属性克制系数：</label>
+        <input type="number" id="natures2">
+    </div></div>
+    <div id="msg1">&nbsp;</div>
+    <div id="msg2">&nbsp;</div>
+    <div id="msg21">&nbsp;</div>
+    <div id="msg3">&nbsp;</div>
+    <div id="msg4">&nbsp;</div>
+    <button onclick="hitinf()">计算</button>
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
