@@ -276,6 +276,11 @@ var banpm = [
   }
   function hitinf() {
     var msg = "";
+    document.getElementById("msg1").style.color = "red";
+    document.getElementById("msg2").style.color = "red";
+    document.getElementById("msg21").style.color = "red";
+    document.getElementById("msg3").style.color = "red";
+    document.getElementById("msg4").style.color = "red";
     document.getElementById("msg1").innerHTML = "&nbsp;";
     document.getElementById("msg2").innerHTML = "&nbsp;";
     document.getElementById("msg3").innerHTML = "&nbsp;";
@@ -398,11 +403,7 @@ var banpm = [
         }
     }
 
-    document.getElementById("msg1").style.color = "red";
-    document.getElementById("msg2").style.color = "red";
-    document.getElementById("msg21").style.color = "red";
-    document.getElementById("msg3").style.color = "red";
-    document.getElementById("msg4").style.color = "red";
+
     document.getElementById("power1").value = "";
     document.getElementById("rate1").value = "";
     document.getElementById("natures1").value = "";
