@@ -1,0 +1,30 @@
+/*
+命运圣契琉璃神域攻略站通用CSS
+编写人：映日雪 立项时间0406
+*/
+/*表格相关*/
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size:20px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/*全局格式*/
+
+p,text{
+    font-size:20px;
+}
+.left{
+    text-align:left
+}
+.right{
+    text-align:right
+}
+.center{
+    text-align:center
+}
