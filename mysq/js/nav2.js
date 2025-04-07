@@ -8,7 +8,8 @@ function createNavigation() {
 
     const navList = document.createElement('ul');
     navList.className = 'space-y-2';
-
+    const urlParams = new URLSearchParams(window.location.search);
+    const uid = urlParams.get('uid');
     const links = [
         { text: '活动排期预览', href: `https://lilyoffice.github.io/mysq/mainhtml/activity.html?uid=${uid}` },
         { text: '梦魅养成攻略', href: `https://lilyoffice.github.io/mysq/mainhtml/activity.html?uid=${uid}` },
