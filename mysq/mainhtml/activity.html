@@ -21,6 +21,17 @@
    
 </head>
 <body class="flex flex-col md:flex-row h-screen">
+    <script>
+        // 获取当前 URL 的参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const uid = urlParams.get('uid');
+
+        // 判断 uid 是否为 xyjcs1
+        if (uid!== 'xyjcs1' && uid!=='ss0513') {
+            // 如果不是，重定向到 404.html
+            window.location.href = '404.html';
+        }
+    </script>
     <!-- 侧边导航栏 -->
     <div class="p-4 md:w-3/4 overflow-y-auto">
     <!-- 正文内容 -->
