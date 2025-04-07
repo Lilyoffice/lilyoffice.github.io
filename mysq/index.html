@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
             body {
                 font-family: "Times New Roman", SimFang, FangSong;
             }
+
             p {
                 font-size: 20px;
             }
@@ -18,8 +20,9 @@
     </style>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/nav.js"></script>
-   
+
 </head>
+
 <body class="flex flex-col md:flex-row h-screen">
     <script>
         // 获取当前 URL 的参数
@@ -27,19 +30,21 @@
         const uid = urlParams.get('uid');
 
         // 判断 uid 是否为 xyjcs1
-        if (uid!== 'xyjuser' && uid!=='ss0513') {
-            // 如果不是，重定向到 404.html
+        if (uid!== 'xyjcs1' && uid!=='ss0513') {
+            // 如果不是，重定向到 404.html 并替换当前历史记录
+            window.history.replaceState({}, '', '404.html');
             window.location.href = '404.html';
         }
     </script>
     <!-- 侧边导航栏 -->
     <div class="p-4 md:w-3/4 overflow-y-auto">
-    <!-- 正文内容 -->
-    <div class="p-4 md:w-3/4 overflow-y-auto">
-        <h2 class="text-2xl font-bold mb-4 text-center">命运圣契琉璃神域攻略站</h2>
-        <p>测试阶段，目前仅开放活动排期预览（截止到双子时代）。<br>本网页仅供琉璃神域、栖霞公会、帝陨使用</p>
-        <p>如有问题请联系映日雪（QQ:2321257520）</p>
+        <!-- 正文内容 -->
+        <div class="p-4 md:w-3/4 overflow-y-auto">
+            <h2 class="text-2xl font-bold mb-4 text-center">命运圣契琉璃神域攻略站</h2>
+            <p>测试阶段，目前仅开放活动排期预览（截止到双子时代）。<br>本网页仅供琉璃神域、栖霞公会、帝陨使用</p>
+            <p>如有问题请联系映日雪（QQ:2321257520）</p>
+        </div>
     </div>
 </body>
-</html>
-    
+
+</html>  
