@@ -10,9 +10,9 @@ function createNavigation() {
     navList.className = 'space-y-2';
 
     const links = [
-        { text: '活动排期预览', href: 'https://lilyoffice.github.io/mysq/mainhtml/activity.html' },
-        { text: '梦魅养成攻略', href: 'https://lilyoffice.github.io/mysq/mainhtml/activity.html' },
-        { text: '新人养成攻略', href: 'https://lilyoffice.github.io/mysq/mainhtml/activity.html' }
+        { text: '活动排期预览', href: '/mysq/mainhtml/activity.html' },
+        { text: '梦魅养成攻略', href: '/mysq/mainhtml/activity.html' },
+        { text: '新人养成攻略', href: '/mysq/mainhtml/activity.html' }
     ];
     links.forEach(({ text, href }) => {
         const listItem = document.createElement('li');
