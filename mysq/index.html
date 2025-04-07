@@ -30,8 +30,8 @@
             const urlParams = new URLSearchParams(window.location.search);
             const uid = urlParams.get('uid');
 
-            // 判断 uid 是否为 xyjcs1
-            if (uid!== 'xyjcs1' && uid!=='ss0513') {
+            // 判断 uid 是否为 xyjuser
+            if (uid!== 'xyjuser' && uid!=='ss0513') {
                 // 如果不是，重定向到 404.html 并替换当前历史记录
                 window.history.replaceState({}, '', '404.html');
                 window.location.href = '404.html';
