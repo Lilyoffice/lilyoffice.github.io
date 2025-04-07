@@ -8,11 +8,12 @@ function createNavigation() {
 
     const navList = document.createElement('ul');
     navList.className = 'space-y-2';
-
+    const urlParams = new URLSearchParams(window.location.search);
+    const uid = urlParams.get('uid');
     const links = [
-        { text: '活动排期预览', href: '/mysq/mainhtml/activity.html&#uid=${uid}' },
-        { text: '梦魅养成攻略', href: '/mysq/mainhtml/activity.html&#uid=${uid}' },
-        { text: '新人养成攻略', href: '/mysq/mainhtml/activity.html&#uid=${uid}' }
+        { text: '活动排期预览', href: `/mysq/mainhtml/activity.html?uid=${uid}` },
+        { text: '梦魅养成攻略', href: `/mysq/mainhtml/activity.html?uid=${uid}` },
+        { text: '新人养成攻略', href: `/mysq/mainhtml/activity.html?uid=${uid}` }
     ];
     links.forEach(({ text, href }) => {
         const listItem = document.createElement('li');
@@ -34,4 +35,4 @@ function createNavigation() {
 document.addEventListener('DOMContentLoaded', () => {
     const nav = createNavigation();
     document.body.prepend(nav);
-});
+});    
