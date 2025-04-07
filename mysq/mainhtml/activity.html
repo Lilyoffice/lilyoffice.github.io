@@ -21,17 +21,27 @@
    
 </head>
 <body class="flex flex-col md:flex-row h-screen">
-    <script>
-        // 获取当前 URL 的参数
-        const urlParams = new URLSearchParams(window.location.search);
-        const uid = urlParams.get('uid');
+ <script>
+                 function verifyUid() {
+            // 获取当前 URL 的参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const uid = urlParams.get('uid');
 
-        // 判断 uid 是否为 xyjcs1
-        if (uid!== 'xyjcs1' && uid!=='ss0513') {
-            // 如果不是，重定向到 404.html 并替换当前历史记录
-            window.history.replaceState({}, '', 'https://lilyoffice.github.io/mysq/404.html');
-            window.location.href = 'https://lilyoffice.github.io/mysq/404.html';
+            // 判断 uid 是否为 xyjcs1
+            if (uid!== 'xyjcs1' && uid!=='ss0513') {
+                // 如果不是，重定向到 404.html 并替换当前历史记录
+                window.history.replaceState({}, '', 'https://lilyoffice.github.io/mysq/404.html');
+                window.location.href = 'https://lilyoffice.github.io/mysq/404.html';
+            }
         }
+
+        // 页面加载时验证 uid
+        verifyUid();
+    
+        // 监听 popstate 事件，用户点击返回或前进时再次验证 uid
+        window.addEventListener('popstate', verifyUid);
+
+
     </script>
            
 
