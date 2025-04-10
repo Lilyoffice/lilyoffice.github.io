@@ -22,26 +22,26 @@
 </head>
 <body class="flex flex-col md:flex-row h-screen">
  <script>
-                 function verifyUid() {
+    //获取更新的uid,注意更新
+    const pwd1 = '0x18a'; // 允许的 uid
+    const pwd2 = 'ss0513'; // 允许的 uid
             // 获取当前 URL 的参数
             const urlParams = new URLSearchParams(window.location.search);
             const uid = urlParams.get('uid');
 
             // 判断 uid 是否为 xyjuser
-            if (uid!== 'xyjuser' && uid!=='ss0513') {
+            if (uid!== pwd1 && uid!== pwd2) {
                 // 如果不是，重定向到 404.html 并替换当前历史记录
-                window.history.replaceState({}, '', 'https://lilyoffice.github.io/mysq/404.html');
-                window.location.href = 'https://lilyoffice.github.io/mysq/404.html';
+                window.history.replaceState({}, '', `404.html?uid=${uid}`);
+                window.location.href = `404.html?uid=${uid}`;
             }
         }
 
         // 页面加载时验证 uid
         verifyUid();
-    
+
         // 监听 popstate 事件，用户点击返回或前进时再次验证 uid
         window.addEventListener('popstate', verifyUid);
-
-
     </script>
            
 
