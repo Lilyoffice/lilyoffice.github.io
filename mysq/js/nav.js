@@ -12,7 +12,7 @@ function createNavigation() {
     const uid = urlParams.get('uid');
     const links = [
         { text: '活动排期预览', href: `/mysq/mainhtml/activity.html?uid=${uid}` },
-        { text: '梦魅养成攻略', href: `/mysq/mainhtml/activity.html?uid=${uid}` },
+        { text: '梦魅养成攻略', href: `/mysq/mainhtml/01mixueer.html?uid=${uid}` },
         { text: '新人养成攻略', href: `/mysq/mainhtml/activity.html?uid=${uid}` }
     ];
     links.forEach(({ text, href }) => {
